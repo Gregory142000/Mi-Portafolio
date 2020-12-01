@@ -1,0 +1,144 @@
+/*--------------------------General------------------------------------------*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+/*-----------------------------Header----------------------------------------*/
+
+.header{
+    background-color: #000000;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    .header__logo{
+        width: 100px;
+        height: 100px;
+        margin-right: 10vw;
+    }
+
+    .header__menuIcon{
+        width: 50px;
+        height: 50px;
+    }
+
+    .header__nav{
+        display: none;
+    }
+
+        /* .header__link{} */
+
+/* Menú versión mobile*/
+
+.mobileNav{
+    background-color: #E70303;
+    width: 100%;
+    height: 88vh;
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+    
+    .mobileNav li{
+        list-style: none;
+        text-align: center;
+        margin: 10vh 0;
+    }
+
+        .mobileNav__link{
+            text-decoration: none;
+            color: #fff;
+            font-size: 2.5rem;
+        }
+
+/*---------------------------- Main -------------------------*/
+
+/* main{} */
+
+/*---------------------------- Section: homePage --------------------------*/
+
+/* .homePage{} */
+
+    .homePage__info{
+         background: url("../images/pages_images/background-mobile.png");
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+    }
+
+        .homePage__avatar{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .homePage__myImage{
+                width: 50%;
+                border-radius: 1000px;
+                margin-top: 2vh;
+            }
+
+            .homePage__socialNetworks{
+                margin-top: 4vh;
+            }
+
+                .homePage__socialNetworks ul{
+                    display: flex;
+                }
+
+                    .homePage__socialNetworks li{
+                        list-style: none;
+                        margin: 0 4vw;
+                    }
+
+                        .homePage__socialIcons{
+                            text-decoration: none;
+                            color: #000;   
+                        }
+
+                            .homePage__socialIcons i{
+                                font-size: 2.3rem;
+                            }
+
+        .homePage__mainText p{
+            margin: 4vh 5vw;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+            .homePage__mainText span{
+                color: #E70303;
+                font-weight: 700;
+            }
+            
+        .homePage__buttonsBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .homePage__buttons{
+                text-decoration: none;
+                color: #fff;
+                background-color: #E70303;
+                border-radius: 15px;
+                width: 50%;
+                height: 10vh;
+                margin: 1vh 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
