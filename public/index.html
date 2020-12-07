@@ -32,24 +32,29 @@
             <img class="header__logo" src="../src/images/icons/LOGO_big.svg" alt="Logo Gregory Vicent" title="Logo Gregory Vicent">
         </a>
 
-        <img class="header__menuIcon" src="../src/images/icons/menu-svgrepo-ligth-white.svg" alt="Icono de hamburguesa">
+        <a href="#" id="burgerMenu">
+            <img class="header__menuIcon" src="../src/images/icons/menu-svgrepo-ligth-white.svg" alt="Icono de hamburguesa">
+        </a>
             
         <nav class="header__nav">
             <ul>
-                <li><a class="header__link" href="#">SOBRE MI</a></li> 
-                <li><a class="header__link" href="#">CONTACTO</a></li>
-                <li><a class="header__link" href="#">CV</a></li> 
+                <li><a class="header__link header__link--hover" href="#">SOBRE MI</a></li> 
+                <li><a class="header__link header__link--hover" href="#">CONTACTO</a></li>
+                <li><a class="header__link header__link--hover" href="#">CV</a></li> 
             </ul>
         </nav>
     </header>
 
-    <nav class="mobileNav">
+    <nav class="mobileNav" id="mobileNav">
         <ul>
-            <li><a class="mobileNav__link" href="#">SOBRE MI</a></li>
-            <li><a class="mobileNav__link" href="#">CONTACTO</a></li>
-            <li><a class="mobileNav__link" href="#">CV</a></li>
+            <li><a class="mobileNav__closed" href="#">X</a></li>
+            <li><a class="mobileNav__link mobileNav__link--hover" href="#">SOBRE MI</a></li>
+            <li><a class="mobileNav__link mobileNav__link--hover" href="#">CONTACTO</a></li>
+            <li><a class="mobileNav__link mobileNav__link--hover" href="#">CV</a></li>
         </ul>
     </nav>
+
+    <!-- <hr class="hr"/> -->
 
     <main>
         <section class="homePage">
@@ -70,37 +75,54 @@
                     <p>HOLA QUERIDO SER DEL OTRO LADO DE LA PANTALLA, SOY <span>GREGORY VICENT</span> PROGRAMADOR WEB...</p>
 
                     <div class="homePage__buttonsBox">
-                        <a class="homePage__buttons" href="#">CONTACTAME</a>
-                        <a class="homePage__buttons" href="#">MÁS SOBRE MI</a>
+                        <a class="homePage__buttons homePage__buttons--size" href="#">CONTACTAME</a>
+                        <a class="homePage__buttons homePage__buttons--size" href="#">MÁS SOBRE MI</a>
                     </div>
                 </div>
             </article>
 
-            <article class="carousel">
-                <div class="carousel__slider">
-                    <div class="carousel__sliders">
-                        <div class="carousel__slide carousel__slide--visible">
-                            <img src="../src/images/pages_images/backgroun_luxury_cars.png" alt="Proyecto 'Luxury cars'" title="Luxury cars">
-                            <a href="#luxury cars">LUXURY CARS</a>
-                        </div>
-                        <div class="carousel__slide">
-                            <img src="../src/images/pages_images/HomePage-1.png" alt="Proyecto 'Mi portafolio'" title="Mi portafolio">
-                            <a href="#">ESTE PORTAFOLIO</a>
-                        </div>
-                        <div class="carousel__circlesBox">
-                            <div class="carousel__circles carousel__circles--red"></div>
-                            <div class="carousel__circles"></div>
-                        </div>
+            <article class="works">
+
+                <div class="works__desktop">
+                    <div class="works__cards">
+                        <a href="#">
+                            <img src="../src/images/pages_images/luxurycars.png" alt="">
+                        </a>
+                        <a href="">LUXURY CARS</a>
+                    </div>
+                    <div class="works__cards">
+                        <a href="#">
+                            <img src="../src/images/pages_images/HomePage-1.png" alt="">
+                        </a>
+                        <a href="">ESTE PORTAFOLIO</a>
                     </div>
                 </div>
-                <div class="carousel__btns">
-                    <a href="#">
-                        <img class="carousel__buttons" src="../src/images/icons/prev.png" alt="prev" title="prev">
+
+                <div class="works__circlesBox">
+                    <a href="#" class="works__criclesLink">
+                        <div class="works__circles works__circles--red" data-slide="luxury-cars"></div>
                     </a>
                     <a href="#">
-                        <img class="carousel__buttons" src="../src/images/icons/next.png" alt="next" title="next">
+                        <div class="works__circles" data-slide="myBriefcase"></div>
                     </a>
                 </div>
+
+                <div class="works__slider">
+                    <div class="works__workBox works__workBox--visible">
+                        <a href="#">
+                            <img src="../src/images/pages_images/luxurycars.png" alt="Proyecto: luxury cars" title="luxury cars" class="works__work">
+                        </a>
+                        <a href="#" class="works__link">LUXURY CARS</a>
+                    </div>
+                    
+                    <div class="works__workBox">
+                        <a href="#">
+                            <img src="../src/images/pages_images/HomePage-1.png" alt="Proyecto: mi portafolio" title="Portafolio Gregory Vicent" class="works__work">
+                        </a>
+                        <a href="#" class="works__link">ESTE PORTAFOLIO</a>
+                    </div>
+                </div>
+                
             </article>
         </section>
     </main> 

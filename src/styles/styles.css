@@ -1,4 +1,4 @@
-/*--------------------------General------------------------------------------*/
+/*-------------------------- General ------------------------------------------*/
 
 *{
     margin: 0px;
@@ -7,15 +7,17 @@
 
 body{
     font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
 }
 
-/*-----------------------------Header----------------------------------------*/
+/*----------------------------- Header ----------------------------------------*/
 
 .header{
     background-color: #000000;
     width: 100%;
-    height: 12vh;
+    height: auto;
     display: flex;
+    border: #000 3px solid;
     justify-content: space-around;
     align-items: center;
 }
@@ -23,7 +25,8 @@ body{
     .header__logo{
         width: 100px;
         height: 100px;
-        margin-right: 10vw;
+        margin-top: -2vh;
+        margin-bottom: -4vh;
     }
 
     .header__menuIcon{
@@ -32,34 +35,114 @@ body{
     }
 
     .header__nav{
-        display: none;
+        display: none;        
     }
+
+        .header__nav ul{
+            display: flex;
+        }
+
+            .header__nav li{
+                list-style: none;
+                margin: 0 2vw;
+            }
+
+                .header__link{
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    transition: all .5s linear;
+                }
+
+                .header__link--hover:hover{
+                    color: #E70303;
+                    text-decoration: underline;
+                }
 
         /* .header__link{} */
 
-/* Menú versión mobile*/
+/*------------------------------------ Mobile Menu ------------------------------------*/
 
 .mobileNav{
     background-color: #E70303;
     width: 100%;
-    height: 88vh;
-    display: none;
-    /* display: flex; */
+    height: 115vh;
+    position: fixed;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    z-index: 1000;
+    transform: translate(0, -120%);
+    visibility: hidden;
+    transition: all 1s ease;
+    margin-top: 0px;
 }
-    
-    .mobileNav li{
-        list-style: none;
-        text-align: center;
-        margin: 10vh 0;
+
+.mobileNav--visibility{
+    opacity: 1;
+    transform: translate(0, -10%);
+    visibility: visible;
+}
+
+    .mobileNav__iconBox{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
     }
 
-        .mobileNav__link{
-            text-decoration: none;
-            color: #fff;
-            font-size: 2.5rem;
+        .mobileNav__closed{
+            
         }
+    
+    .mobileNav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        margin-top: 15vh;
+    }
+
+        .mobileNav li{
+            list-style: none;
+            margin: 5vh 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .mobileNav__closed{
+                color: #E70303;
+                text-decoration: none;
+                font-size: 2.5rem;
+                font-weight: 700;
+                text-align: center;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff;
+                border-radius: 1000px;
+                border: #fff 3px solid;
+                transition: all .6s ease;
+            }
+
+                .mobileNav__closed:hover{
+                    color: #fff;
+                    background-color: #E70303;
+                }
+
+            .mobileNav__link{
+                text-decoration: none;
+                color: #fff;
+                font-size: 2.5rem;
+                transition: all .5s ease;
+            }
+                .mobileNav__link--hover:hover{
+                    color: #000;
+                    font-size: 2.8rem;
+                }
 
 /*---------------------------- Main -------------------------*/
 
@@ -67,13 +150,18 @@ body{
 
 /*---------------------------- Section: homePage --------------------------*/
 
-/* .homePage{} */
+.homePage{
+    width: 100%;
+} 
 
     .homePage__info{
-         background: url("../images/pages_images/background-mobile.png");
+        background: url("../images/pages_images/background-mobile.png");
         background-size: cover;
         width: 100%;
         height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
         .homePage__avatar{
@@ -108,6 +196,11 @@ body{
 
                             .homePage__socialIcons i{
                                 font-size: 2.3rem;
+                                transition: all .5s ease;
+                            }
+
+                            .homePage__socialIcons i:hover{
+                                color: #E70303;
                             }
 
         .homePage__mainText p{
@@ -143,88 +236,360 @@ body{
                 font-weight: 300;
             }
 
-/*---------------------------------- Carousel ------------------------------------*/
+/*------------------------------ Works ------------------------------*/
 
-.carousel{
+.works{
+    height: auto;
     width: 100%;
 }
 
-    /* .carousel__slider{} */
-
-        /* .carousel__sliders{} */
-
-            .carousel__slide{
-                width: 100%;
-                height:50vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 1.5s ease;
-            }
-
-            .carousel__slide--visible{
-                opacity: 1;
-                visibility: visible;
-            }
-
-            
-                .carousel__slide img{
-                    object-fit: cover;
-                    width: 100%;
-                    position: absolute;
-                }
-
-                .carousel__slide a{
-                    text-decoration: none;
-                    color: #E70303;
-                    z-index: 999;
-                    position: absolute;
-                    width: 70%;
-                    background-color: rgba(0,0,0,0.7);
-                    border: 2px #fff solid;
-                    height: 10vh;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-family: 'Bungee Inline', cursive;
-                    font-size: 1.5rem;
-                    text-align: center;
-                }
-
-            .carousel__circlesBox{
-                display: flex;
-                position: absolute;
-                width: 100%;
-                justify-content: center;
-                margin-top: 37vh;
-            }
-
-                .carousel__circles{
-                    width: 15px;
-                    height: 15px;
-                    background-color: grey;
-                    margin: 2vw;
-                    border-radius: 50%;
-                    border: solid #fff 2px;
-                    transition: all .5s ease;
-                }
-
-                .carousel__circles--red{
-                    background-color: #E70303;
-                }
-
-    .carousel__btns{
-        position: absolute;
+    .works__workBox{
+        min-width: 300px;
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        margin-top: 19vh;
-        z-index: 800;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1.5s ease;
     }
 
-        .carousel__btns a{
-            margin: 0 2vw;
+    .works__workBox--visible{
+        visibility: visible;
+        opacity: 1;
+    }
+
+        .works__work{
+            width: 100%;
+            position: absolute;
         }
+
+        .works__link{
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 10vh;
+            color: #E70303;
+            position: absolute;
+            font-size: 1.7rem;
+            text-align: center;
+            text-decoration: none;
+            z-index: 50;
+            font-family: 'Bungee Inline', cursive;
+        }
+
+    .works__circlesBox{
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .works__circles{
+            margin: 1vh 2vw;
+            background-color: grey;
+            width: 15px;
+            border-radius: 50%;
+            height: 15px;
+            border: #fff solid 2px;
+            transition: all .5s ease;
+        }
+
+        .works__circles--red{
+            background-color: #E70303;
+        }
+
+    .works__desktop{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+        .works__cards{     
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10vh 3vw;
+        }
+
+            .works__cards img{
+                min-width: 300px;
+                width: 500px;
+                border-radius: 100%;
+                object-fit: cover;
+                transition: all 1s ease;
+            }
+
+            .works__cards a{
+                font-size: 2rem;
+                text-align: center;
+                color: #E70303;
+                width: 100%;
+                text-decoration: none;
+                font-family: 'Bungee Inline', cursive;
+            }
+
+            .works__cards img:hover{
+                border-radius: 0px;
+            }
+
+/*------------------------------ Media Queries ------------------------------*/
+
+@media (min-width: 380px){
+
+    /*------------------------ MobileMenu ------------------*/
+
+    .mobileNav__link{
+        font-size: 3rem;
+    }
+
+    /*------------------ HomePage -------------------*/
+
+    .homePage__myImage{
+        width: 40%;
+    }
+
+    .homePage__mainText p{
+        font-size: 1.5rem;
+    }
+
+        .homePage__buttonsBox{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+            .homePage__buttons{
+                width: 40%;
+                height: 13vh;
+                font-size: 1.6rem;
+            }
+}
+
+@media (min-width: 600px){
+
+    /*-------------------- Header -------------------*/
+
+    .header__logo{
+        width: 120px;
+        height: 120px;
+    }
+
+    .header__menuIcon{
+        display: none;
+    }
+
+    .header__nav{
+        display: flex;
+    }
+
+    /*------------------- HomePage ------------------*/
+
+    .homePage__info{
+        background-size: contain;
+    }
+
+        .homePage__myImage{
+            width: 30%;
+        }
+
+            .homePage__socialIcons i{
+                font-size: 3rem;
+            }
+
+        .homePage__mainText p{
+            font-size: 1.7rem;
+        }
+
+            .homePage__buttons{
+                font-size: 2rem;
+            }
+
+    /*------------------- Works ---------------------*/
+
+    .works__link{
+        font-size: 2.5rem;
+    }
+
+        .works__circles{
+            width: 20px;
+            height: 20px;
+        }
+
+}
+
+@media (min-width: 890px){
+
+    /*------------------ HomePage ------------------*/
+
+    .homePage__info{
+        display: flex;
+        flex-direction: row;
+        height: 82vh;
+    }
+
+    .homePage__avatar{
+        order: 1;
+        justify-content: center;
+        height: 100%;
+        margin-right: 2vw;
+    }
+
+        .homePage__myImage{
+            width: 90%;
+        }
+
+        .homePage__socialNetworks li{
+            margin: 0 3vw;
+        }
+            .homePage__socialIcons i{
+                font-size: 4rem;
+            }
+
+    .homePage__mainText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    .homePage__mainText p{
+        font-size: 2rem;
+        width: auto;
+    }
+
+        .homePage__buttonsBox{
+            flex-direction: column;
+        }
+
+            .homePage__buttons{
+                width: 50%;
+                transition: all .5s linear;
+            }
+
+            .homePage__buttons--size:hover{
+                width: 70%;
+            }
+
+    /*------------------------ Works ------------------------*/
+
+    .works__circlesBox{
+        display: none;
+    }
+
+    .works__slider{
+        display: none;
+    }
+
+    .works__desktop{
+        display: flex;
+    }
+
+}
+
+@media (min-width: 1024px){
+
+    /*----------------------- Header ------------------------*/
+
+    .header__logo{
+        width: 150px;
+        height: 150px;
+    }
+
+    .header__link{
+        font-size: 2rem;
+    }
+
+    /*---------------------- HomePage -----------------------*/
+
+    .homePage__myImage{
+        width: 80%;
+    }
+
+    .homePage__mainText p{
+        font-size: 2.3rem;
+    }
+
+        .homePage__buttons{
+            height: 15vh;
+            font-size: 2.3rem;
+        }
+}
+
+@media (min-width: 1365px){
+
+    /*----------------------- HomePage ----------------------*/
+
+    .homePage__myImage{
+        width: 80%;
+    }
+
+        .homePage__socialIcons i{
+            font-size: 5rem;
+        }
+
+    .homePage__mainText p{
+        font-size: 2.5rem;
+    }
+
+        .homePage__buttons{
+            height: 18vh;
+            font-size: 2.5rem;
+        }
+}
+
+@media (min-height: 1100px){
+
+    /*--------------- Header -------------------*/
+
+    .header__logo{
+        width: 200px;
+        height: 200px;
+    }
+
+    .header__link{
+        font-size: 2.5rem;
+    }
+
+    /*--------------- HomePage -------------*/
+
+    .homePage__info{
+        flex-direction: column;
+    }
+
+        .homePage__socialIcons i{
+            font-size: 5rem;
+        }
+        
+            .homePage__myImage{
+                width: 40%;
+                margin-top: 10vh;
+            }
+
+        .homePage__mainText{
+            order: 1;
+        }
+
+        .homePage__mainText p{
+            font-size: 3rem;
+        }
+
+            .homePage__mainText a{
+                height: 11vh;
+                font-size: 3rem;
+            }
+
+    .works__cards{
+        width: 600px;
+        margin-bottom: -2vh;
+    }
+       
+        .works__cards img{
+            width: 600px;
+        }
+
+        .works__cards a{
+            font-size: 3.5rem;
+        }
+}
