@@ -1,0 +1,30 @@
+/*--------------------------------------------- HomePage ----------------------------------------------*/
+
+.homePage__contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .homePage__subTitle{
+        color: #E70303;
+        font-family: 'Bungee Inline', cursive;
+        font-size: 2rem;
+    }
+
+    .homePage__buttonContact{
+        text-decoration: none;
+        color: #fff;
+        background-color: #E70303;
+        border-radius: 15px;
+        width: 90%;
+        height: 10vh;
+        margin: 1vh 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 300;
+    }
