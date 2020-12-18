@@ -431,7 +431,7 @@ body{
 
 /*------------------------------------------ About Me -------------------------------------------------*/
 
-.aboutMePageHeader{}
+/* .aboutMePageHeader{} */
 
     .aboutMePageHeader__info{
         background: url("../images/pages_images/background-mobile.png");
@@ -566,6 +566,122 @@ body{
                     padding: 3%;
                 }
 
+/*----------------------------------------- CV --------------------------------------------------------*/
+
+.cvHeader{
+    background: url("../images/pages_images/background-mobile.png");
+    display: flex;
+    background-size: contain;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .cvHeader__blackBox{
+        background-color: #000;
+        width: 90%;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+        .cvHeader__myImage{
+            width: 60%;
+            border-radius: 50%;
+            margin: 2vh 0;
+        }
+
+        .cvHeader__myName{
+            color: #E70303;
+            font-family: 'Bungee Inline', cursive;
+            margin: 1vh 0;
+            font-size: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        .cvHeader__subTitle{
+            color: #fff;
+            font-size: 1.6rem;
+        }
+
+        .cvHeader__pdf{
+            color: rgb(209, 209, 209);
+            margin: 2vh 0;
+            font-size: 1rem;
+        }
+
+.cvBody{
+}
+
+        .cvBody__boxes{
+            background-color: #000;
+            width: 80%;
+            height: auto;
+            padding: 2rem;
+            margin: 1vh 0;
+            border-radius: 15px;
+        }
+
+            .cvBody__section{
+                color: #E70303;
+                width: 100%;
+                font-family: 'Bungee Inline', cursive;
+                font-size: 1.5rem;
+            }
+
+            .cvBody__section--left{
+                text-align: start;
+            }
+            
+            .cvBody__section--right{
+                text-align: end;
+            }
+
+                .cvBody__list{
+                    margin-top: 2vh;
+                }
+
+                    .cvBody__items{
+                        color: #fff;
+                        font-size: 1.2rem
+                    }
+
+            .cvBody__technology{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2vh;
+            }
+
+                    .cvBody__languages{
+                        width: 100px;
+                        display: flex;
+                        height: auto;
+                        flex-direction: column;
+                        margin: 1.5vw;
+                    }
+
+                        .cvBody__language img{
+                            width: 40%;
+                        }
+
+                        .cvBody__languagesName{
+                            color: #fff;
+                            text-align: center;
+                            font-size: 1.1rem;
+                        }
+
+        .cvBody__myDescription{
+            color: #fff;
+            font-size: 1.2rem;
+            margin: 2vh 0;
+        }
 /*------------------------------------------ Media Queries ----------------------------------------------*/
 
 @media (min-width: 380px){
