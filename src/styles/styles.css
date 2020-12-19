@@ -615,15 +615,14 @@ body{
             font-size: 1rem;
         }
 
-.cvBody{
-}
+.cvBody{}
 
         .cvBody__boxes{
             background-color: #000;
             width: 80%;
             height: auto;
             padding: 2rem;
-            margin: 1vh 0;
+            margin: 1vh auto;
             border-radius: 15px;
         }
 
@@ -758,7 +757,8 @@ body{
         .aboutMePageHeader__subTitle{
             font-size: 2rem;
         }
- .aboutMePageBody__content{
+
+    .aboutMePageBody__content{
         height: 50vh;
     }
 
@@ -800,6 +800,35 @@ body{
     .aboutMePageBody__summary{
         font-size: 1.5rem;
     }
+
+    /*--------------------- CV ---------------------*/
+
+    .cvHeader__myName{
+        font-size: 2.5rem;
+    }
+
+    .cvHeader__subTitle{
+        font-size: 2rem;
+    }
+
+    .cvHeader__pdf{
+        font-size: 1.3rem;
+    }
+
+        .cvBody__section{
+            font-size: 2rem;
+        }
+
+        .cvBody__list{
+            margin-left: 3vw;
+        }
+            .cvBody__items{
+                font-size: 1.3rem;
+            }
+
+            .cvBody__myDescription{
+                font-size: 1.3rem;
+            }
 
 }
 
@@ -899,6 +928,16 @@ body{
         .aboutMePageBody__content p{
             font-size: 1.7rem;
         }
+
+    /*--------------------- CV ---------------------*/
+
+    .cvHeader__myImage{
+        width: 50%;
+    }
+
+    .cvHeader__myName{
+        margin: 5vh 0;
+    }
 }
 
 @media (min-width: 690px){
@@ -959,6 +998,36 @@ body{
             .aboutMePageHeader__subTitle{
                 font-size: 2.5rem;
             }
+}
+
+@media (min-width: 800px){
+
+    /*----------------------------- CV ------------------------------*/
+
+    .cvHeader__blackBox{
+        width: 75%;
+    }
+    .cvHeader__myImage{
+        width: 310px;
+    }
+
+    .cvHeader__myName{
+        font-size: 3rem;
+    }
+
+    .cvBody__contentUp{
+        display: flex;
+        justify-content: space-around;
+    }
+
+        .cvBody__boxes--order{
+            order: 1; 
+            width: 40%;
+        }
+
+        .cvBody__content{
+            width: 50%;
+        }
 }
 
 @media (min-width: 890px){
