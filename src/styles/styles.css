@@ -10,11 +10,20 @@ body{
     overflow-x: hidden;
 }
 
+hr{
+    border-radius: 15%;
+    margin: auto;
+    display: none;
+    height: 1px;
+    background-color: #fff;
+    width: 80%;
+}
+
 /*---------------------------------------------- Header ------------------------------------------------*/
 
 .header{
     background-color: #000000;
-    width: 100%;
+    width: 98%;
     height: auto;
     display: flex;
     border: #000 3px solid;
@@ -145,6 +154,7 @@ body{
 
 .homePage{
     width: 100%;
+    background-color: #000;
 } 
 
     .homePage__info{
@@ -238,6 +248,7 @@ body{
 .works{
     height: auto;
     width: 100%;
+    background-color: #fff;
 }
 
     .works__workBox{
@@ -335,6 +346,10 @@ body{
 
 /*--------------------------------------------- Contact -----------------------------------------------*/
 
+.main{
+    background-color: #000;
+}
+
 .contactPage{
     background: url("../images/pages_images/background-mobile.png");
     display: flex;
@@ -431,7 +446,9 @@ body{
 
 /*------------------------------------------ About Me -------------------------------------------------*/
 
-/* .aboutMePageHeader{} */
+.aboutMePageHeader{
+    background-color: #000;
+}
 
     .aboutMePageHeader__info{
         background: url("../images/pages_images/background-mobile.png");
@@ -615,7 +632,7 @@ body{
             font-size: 1rem;
         }
 
-.cvBody{}
+/* .cvBody{} */
 
         .cvBody__boxes{
             background-color: #000;
@@ -681,9 +698,165 @@ body{
             font-size: 1.2rem;
             margin: 2vh 0;
         }
+
+/*---------------------------------------- Luxury Cars ----------------------------------------*/
+
+/* .luxury-cars{} */
+
+        .luxury-cars__header{
+            background: url("../images/pages_images/background-mobile.png");
+            width: 100%;
+            height: auto;
+            background-size: cover;
+        }
+
+            .luxury-cars__title{
+                color: #E70303;
+                width: 100%;
+                margin-bottom: 2vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                height: 100px;
+                font-family: 'Bungee Inline', cursive;
+            }
+
+            .luxury-cars__coverPage{
+                width: 100%;
+            }
+
+            .luxury-cars__buttonsBox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            
+            .luxury-cars__links--shadow{
+                transition: all .3s linear;
+                box-shadow: 0px 0px 0px black;
+            }
+            
+            .luxury-cars__links--shadow:hover{
+                box-shadow: 15px 15px 15px black;
+            }
+
+                .luxury-cars__links{
+                    text-decoration: none;
+                    background-color: #E70303;
+                    border-radius: 15px;
+                    width: 80%;
+                    height: 10vh;
+                    margin: 2vh 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-weight: 300;
+                    font-size: 1.4rem;
+                }
+
+                    .luxury-cars__links i{
+                        margin: 3vh 3vw;
+                        font-size: 2rem;
+                    }
+
+        .luxury-cars__body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .luxury-cars__blackBox{
+                background-color: #000;
+                border-radius: 15px;
+                margin: 3vh 0;
+                padding: 5%;
+            }
+
+                .luxury-cars__subTitle{
+                    color: #E70303;
+                    font-family: 'Bungee Inline', cursive ;
+                    font-size: 1.8rem;
+                    text-align: center;
+                    margin: 2vh 0;
+                }
+
+                .luxury-cars__text{
+                    color: #fff;
+                    text-align: center;
+                    font-size: 1.2rem;
+                }
+
+                    .luxury-cars__technology{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                        .luxury-cars__languages{
+                            width: 120px;
+                        }
+
+                            .luxury-cars__figure{
+                                margin: 3vh 0;
+                                display: flex;
+                                justify-content: center;
+                                flex-direction: column;
+                                width: 120px;
+                            }
+
+                                .luxury-cars__icon{
+                                    width: auto;
+                                }
+
+                                .luxury-cars__titleIcon{
+                                    color: #fff;
+                                    text-align: center;
+                                    margin: 1vh 0;
+                                    font-size: 1.3rem;
+                                }
+                
+                .luxury-cars__responsive{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                    .luxury-cars__responsiveImage{
+                        margin: 2vh 0;
+                    }
+
+                    .luxury-cars__responsiveImage--big{
+                        width: 90%;
+                    }
+                    .luxury-cars__responsiveImage--meddle{
+                        width: 50%;
+                    }
+                    .luxury-cars__responsiveImage--small{
+                        width: 30%;
+                    }
 /*------------------------------------------ Media Queries ----------------------------------------------*/
+@media (min-width: 315px){
+
+    /*--------------------------- LuxuryCars ------------------*/
+    .luxury-cars__header{
+        background-size: contain;
+    }
+}
 
 @media (min-width: 380px){
+
+    /*------------------------ Header ---------------------*/
+
+    .header{
+        width: 100%;
+    }
 
     /*------------------------ MobileMenu ------------------*/
 
@@ -768,6 +941,12 @@ body{
         display: flex;
         align-items: center;
     }
+
+    /*------------------ LuxuryCars ----------------*/
+
+    .luxury-cars__title{
+        font-size: 2.5rem;
+    }
 }
 
 @media (min-width: 440px){
@@ -830,6 +1009,21 @@ body{
                 font-size: 1.3rem;
             }
 
+    /*------------------------- LuxuryCars -------------------------*/
+
+    .luxury-cars__links{
+        font-size: 1.8rem;
+    }
+
+        .luxury-cars__links i{
+            font-size: 2.5rem;
+        }
+
+    .luxury-cars__subTitle{
+        font-size: 2.2rem;
+        margin: 4vh 0;
+    }
+
 }
 
 @media (min-width: 600px){
@@ -853,6 +1047,10 @@ body{
 
     .homePage__info{
         background-size: contain;
+    }
+
+    hr{
+        display: block;
     }
 
         .homePage__myImage{
@@ -938,6 +1136,60 @@ body{
     .cvHeader__myName{
         margin: 5vh 0;
     }
+
+    /*--------------------- LuxuryCars ---------------------*/
+    .luxury-cars__header{
+        display: flex;
+        flex-direction: column;
+    }
+
+        .luxury-cars__title{
+            font-size: 2.7rem;
+        }
+
+        .luxury-cars__coverPage{
+            width: 90%;
+            margin: auto;
+        }
+
+        .luxury-cars__buttonsBox{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+            .luxury-cars__links{
+                width: 45%;
+                font-size: 1.6rem;
+            }
+
+                .luxury-cars__links i{
+                    margin: 3vh 1vw;
+                }
+
+        .luxury-cars__blackBox{
+            width: 80%;
+        }
+
+            .luxury-cars__text{
+                font-size: 1.3rem;
+            }
+            
+        .luxury-cars__languages{
+            width: 180px;
+        }
+
+            .luxury-cars__figure{
+                width: 180px;
+                align-items: center;
+            }
+
+                .luxury-cars__icon{
+                    width: 70%;
+                }
+
+                .luxury-cars__titleIcon{
+                    font-size: 1.8rem;
+                }
 }
 
 @media (min-width: 690px){
@@ -1028,6 +1280,12 @@ body{
         .cvBody__content{
             width: 50%;
         }
+
+    /*-------------------------------- LuxuryCars ------------------------------------*/
+
+    .luxury-cars__coverPage{
+        width: 70%;
+    }
 }
 
 @media (min-width: 890px){
@@ -1152,6 +1410,25 @@ body{
                 font-size: 2rem;
             }
 
+    /*---------------------- LuxuryCars -----------------------*/
+
+    .luxury-cars__coverPage{
+        width: 700px;
+        height: 60vh;
+    }
+
+    .luxury-cars__title{
+        font-size: 3rem;
+    }
+
+    .luxury-cars__subTitle{
+        font-size: 2.6rem;
+    }
+
+    .luxury-cars__responsive{
+        width: 80%;
+    }
+
 }
 
 @media (min-width: 1024px){
@@ -1235,6 +1512,31 @@ body{
             .aboutMePageHeader__description p{
                 font-size: 1.5rem;
             }
+
+    /*------------------------- LuxuryCars -------------------------*/
+
+    .luxury-cars__coverPage{
+        width: 800px;
+        height: 450px;
+    }
+
+        .luxury-cars__links{
+            width: 40%;
+            height: 15vh;
+            font-size: 2rem;
+        }
+
+            .luxury-cars__links i{
+                font-size: 3rem;
+            }
+
+    .luxury-cars__subTitle{
+        margin-top: 0px;
+    }
+
+    .luxury-cars__responsive{
+        width: 60%;
+    }
 }
 
 @media (min-width: 1365px){

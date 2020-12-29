@@ -1,0 +1,63 @@
+.carousel{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 3vh 0;
+}
+
+    .carousel__ballBox{
+        background-color: black;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+        .carousel__ballLink{
+            margin: 5px;
+        }
+
+            .carousel__ball {
+                background-color: grey;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: #fff 2px solid;
+                transition: all .3s linear;
+            }
+
+            .carousel__ball--red{
+                background-color: red;
+            }
+
+    .carousel__sliders{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .carousel__slide{
+            width: 100%;
+            opacity: 0;
+            display: none;
+            visibility: hidden;
+            transition: all 1s linear;
+        }
+
+        .carousel__slide--visible{
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+
+/*------------------------------------------ MediaQuery ---------------------------------------------*/
+
+@media(min-width: 600px){
+
+    .carousel__ballBox{
+        width: 80%;
+    }
+
+    .carousel__slide{
+        width: 80%;
+    }
+}
