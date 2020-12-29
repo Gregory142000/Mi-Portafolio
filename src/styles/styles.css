@@ -29,6 +29,7 @@ hr{
     border: #000 3px solid;
     justify-content: space-around;
     align-items: center;
+    margin: 0px;
 }
 
     .header__logo{
@@ -149,6 +150,39 @@ hr{
                     font-size: 2.8rem;
                 }
 
+/*------------------------------- ScrollUp -------------------------------*/
+
+.scrollUp{
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    z-index: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+    .scrollUp__button{
+        width: 70px;
+        height: 70px;
+        margin-right: 20px;
+        border-radius: 50%;
+        opacity: 0;
+        visibility: hidden;
+        border: solid #fff 2px;
+        transition: all .5s ease;
+        background-color: #E70303;
+    }
+
+        .scrollUp__button i{
+            font-size: 2rem;
+        }
+
+    .scrollUp__button--visible{
+        opacity: 1;
+        z-index: 500;
+        visibility: visible;
+    }
 
 /*---------------------------- Section: homePage --------------------------*/
 
@@ -317,18 +351,22 @@ hr{
         .works__cards{     
             width: 500px;
             display: flex;
+            height: 500px;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             margin: 10vh 3vw;
+            background-color: rgb(37, 36, 36);
+            border-radius: 15px;
         }
 
             .works__cards img{
                 min-width: 300px;
-                width: 500px;
-                border-radius: 100%;
+                width: 450px;
+                height: 250px;
                 object-fit: cover;
-                transition: all 1s ease;
+                margin: 5%;
+                border: #E70303 solid 4px;
             }
 
             .works__cards a{
@@ -340,8 +378,11 @@ hr{
                 font-family: 'Bungee Inline', cursive;
             }
 
-            .works__cards img:hover{
-                border-radius: 0px;
+            .works__cards p{
+                color: #fff;
+                margin: 5%;
+                font-size: 1.2rem;
+                text-align: center;
             }
 
 /*--------------------------------------------- Contact -----------------------------------------------*/
@@ -748,6 +789,7 @@ hr{
                     border-radius: 15px;
                     width: 80%;
                     height: 10vh;
+                    z-index: 400;
                     margin: 2vh 0;
                     display: flex;
                     justify-content: center;
@@ -841,11 +883,169 @@ hr{
                     .luxury-cars__responsiveImage--small{
                         width: 30%;
                     }
+
+/*---------------------------------------- Briefcase ----------------------------------------*/
+
+/* .briefcase{} */
+
+        .briefcase__header{
+            background: url("../images/pages_images/background-mobile.png");
+            width: 100%;
+            height: auto;
+            background-size: contain;
+        }
+
+            .briefcase__title{
+                color: #e70303;
+                width: 100%;
+                margin-bottom: 2vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                height: 100px;
+                font-family: 'bungee inline', cursive;
+            }
+
+            .briefcase__coverPage{
+                width: 100%;
+            }
+
+            .briefcase__buttonsBox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            
+            .briefcase__links--shadow{
+                transition: all .3s linear;
+                box-shadow: 0px 0px 0px black;
+            }
+            
+            .briefcase__links--shadow:hover{
+                box-shadow: 15px 15px 15px black;
+            }
+
+                .briefcase__links{
+                    text-decoration: none;
+                    background-color: #e70303;
+                    border-radius: 15px;
+                    width: 80%;
+                    height: 10vh;
+                    margin: 2vh 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-weight: 300;
+                    font-size: 1.4rem;
+                }
+
+                    .briefcase__links i{
+                        margin: 3vh 3vw;
+                        font-size: 2rem;
+                    }
+
+        .briefcase__body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .briefcase__blackBox{
+                background-color: #000;
+                border-radius: 15px;
+                margin: 3vh 0;
+                padding: 5%;
+            }
+
+            .briefcase__figureContact{
+                width: 100%;
+                margin: 3vh 0;
+            }
+
+                .briefcase__figureImage{
+                    width: 100%;
+                }
+
+                .briefcase__subTitle{
+                    color: #E70303;
+                    font-family: 'Bungee Inline', cursive ;
+                    font-size: 1.8rem;
+                    text-align: center;
+                    margin: 2vh 0;
+                }
+
+                .briefcase__text{
+                    color: #fff;
+                    text-align: center;
+                    font-size: 1.2rem;
+                }
+
+                    .briefcase__technology{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                        .briefcase__languages{
+                            width: 120px;
+                        }
+
+                            .briefcase__figure{
+                                margin: 3vh 0;
+                                display: flex;
+                                justify-content: center;
+                                flex-direction: column;
+                                width: 120px;
+                            }
+
+                                .briefcase__icon{
+                                    width: auto;
+                                }
+
+                                .briefcase__titleIcon{
+                                    color: #fff;
+                                    text-align: center;
+                                    margin: 1vh 0;
+                                    font-size: 1.3rem;
+                                }
+                
+                .briefcase__responsive{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                    .briefcase__responsiveImage{
+                        margin: 2vh 0;
+                    }
+
+                    .briefcase__responsiveImage--big{
+                        width: 90%;
+                    }
+                    .briefcase__responsiveImage--meddle{
+                        width: 50%;
+                    }
+                    .briefcase__responsiveImage--small{
+                        width: 30%;
+                    }
+
 /*------------------------------------------ Media Queries ----------------------------------------------*/
 @media (min-width: 315px){
 
     /*--------------------------- LuxuryCars ------------------*/
     .luxury-cars__header{
+        background-size: contain;
+    }
+
+    /*--------------------------- Briefcase ------------------*/
+    .briefcase__header{
         background-size: contain;
     }
 }
@@ -943,8 +1143,12 @@ hr{
     }
 
     /*------------------ LuxuryCars ----------------*/
-
     .luxury-cars__title{
+        font-size: 2.5rem;
+    }
+     
+    /*------------------ Briefcase ----------------*/
+    .briefcase__title{
         font-size: 2.5rem;
     }
 }
@@ -1024,6 +1228,20 @@ hr{
         margin: 4vh 0;
     }
 
+    /*------------------------- Briefcase -------------------------*/
+
+    .briefcase__links{
+        font-size: 1.8rem;
+    }
+
+        .briefcase__links i{
+            font-size: 2.5rem;
+        }
+
+    .briefcase__subTitle{
+        font-size: 2.2rem;
+        margin: 4vh 0;
+    }
 }
 
 @media (min-width: 600px){
@@ -1047,10 +1265,6 @@ hr{
 
     .homePage__info{
         background-size: contain;
-    }
-
-    hr{
-        display: block;
     }
 
         .homePage__myImage{
@@ -1190,6 +1404,64 @@ hr{
                 .luxury-cars__titleIcon{
                     font-size: 1.8rem;
                 }
+
+    /*--------------------- Briefcase ---------------------*/
+    .briefcase__header{
+        display: flex;
+        flex-direction: column;
+    }
+
+        .briefcase__title{
+            font-size: 2.7rem;
+        }
+
+        .briefcase__coverPage{
+            width: 90%;
+            margin: auto;
+        }
+
+        .briefcase__buttonsBox{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+            .briefcase__links{
+                width: 45%;
+                font-size: 1.6rem;
+            }
+
+                .briefcase__links i{
+                    margin: 3vh 1vw;
+                }
+
+        .briefcase__blackBox{
+            width: 80%;
+        }
+
+            .briefcase__text{
+                font-size: 1.3rem;
+            }
+            
+        .briefcase__languages{
+            width: 180px;
+        }
+
+            .briefcase__figure{
+                width: 180px;
+                align-items: center;
+            }
+
+                .briefcase__icon{
+                    width: 70%;
+                }
+
+                .briefcase__titleIcon{
+                    font-size: 1.8rem;
+                }
+
+        .briefcase__figureContact{
+            width: 80%;
+        }
 }
 
 @media (min-width: 690px){
@@ -1286,11 +1558,21 @@ hr{
     .luxury-cars__coverPage{
         width: 70%;
     }
+
+    /*-------------------------------- Briefcase ------------------------------------*/
+
+    .briefcase__coverPage{
+        width: 70%;
+    }
 }
 
 @media (min-width: 890px){
 
     /*------------------ HomePage ------------------*/
+
+    hr{
+        display: block;
+    }
 
     .homePage__info{
         display: flex;
@@ -1429,6 +1711,25 @@ hr{
         width: 80%;
     }
 
+    /*---------------------- Briefcase-----------------------*/
+
+    .briefcase__coverPage{
+        width: 700px;
+        height: 60vh;
+    }
+
+    .briefcase__title{
+        font-size: 3rem;
+    }
+
+    .briefcase__subTitle{
+        font-size: 2.6rem;
+    }
+
+    .briefcase__responsive{
+        width: 80%;
+    }
+
 }
 
 @media (min-width: 1024px){
@@ -1535,6 +1836,31 @@ hr{
     }
 
     .luxury-cars__responsive{
+        width: 60%;
+    }
+
+    /*------------------------- Briefcase -------------------------*/
+
+    .briefcase__coverPage{
+        width: 800px;
+        height: 450px;
+    }
+
+        .briefcase__links{
+            width: 40%;
+            height: 15vh;
+            font-size: 2rem;
+        }
+
+            .briefcase__links i{
+                font-size: 3rem;
+            }
+
+    .briefcase__subTitle{
+        margin-top: 0px;
+    }
+
+    .briefcase__responsive{
         width: 60%;
     }
 }
