@@ -256,7 +256,7 @@ span{
         }
 
             .homePage__mainText span{
-                color: #E70303;
+                color: #000;
                 font-weight: 700;
             }
             
@@ -1612,16 +1612,18 @@ span{
     .homePage__avatar{
         order: 1;
         justify-content: center;
+        align-items: center;
         height: 100%;
         margin-right: 2vw;
+        padding-top: 30px;
     }
 
         .homePage__myImage{
-            width: 90%;
+            width: 80%;
         }
 
         .homePage__socialNetworks li{
-            margin: 0 3vw;
+            margin: 0 2vw;
         }
             .homePage__socialIcons i{
                 font-size: 4rem;
@@ -1637,6 +1639,10 @@ span{
         font-size: 2rem;
         width: auto;
     }
+
+        .homePage__mainText span{
+            color: #E70303;
+        }
 
         .homePage__buttonsBox{
             flex-direction: column;
@@ -1780,6 +1786,10 @@ span{
 
     /*---------------------- HomePage -----------------------*/
 
+    .homePage__avatar{
+        padding-top: 40px;
+    }
+
     .homePage__myImage{
         width: 80%;
     }
@@ -1804,7 +1814,7 @@ span{
     } */
 
     .contactPage__myImage{
-        width: 70%;
+        width: 60%;
     }
 
         .contactPage__text{
