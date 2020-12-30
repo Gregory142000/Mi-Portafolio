@@ -710,6 +710,15 @@ span{
                 font-size: 1.5rem;
             }
 
+                .cvBody__webSite{
+                    color: #fff;
+                    transition: ease .4s all;
+                }
+
+                .cvBody__webSite:hover{
+                    color: #E70303;
+                }
+
             .cvBody__section--left{
                 text-align: start;
             }
@@ -1788,6 +1797,7 @@ span{
 
     .homePage__avatar{
         padding-top: 40px;
+        margin-right: 80px;
     }
 
     .homePage__myImage{
