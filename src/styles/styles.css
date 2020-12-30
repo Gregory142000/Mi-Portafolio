@@ -1782,6 +1782,16 @@ span{
 
 @media (min-width: 1024px){
 
+    /*----------------------- ScrollUp ------------------------*/
+
+    .scrollUp{
+        height: 80%;
+    }
+
+    .scrollUp__button{
+        width: 70px;
+        height: 70px;
+    }
     /*----------------------- Header ------------------------*/
 
     .header__logo{
