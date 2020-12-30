@@ -19,6 +19,10 @@ hr{
     width: 80%;
 }
 
+span{
+    color: #E70303;
+    font-weight: 700;
+}
 /*---------------------------------------------- Header ------------------------------------------------*/
 
 .header{
@@ -284,6 +288,14 @@ hr{
     width: 100%;
     background-color: #fff;
 }
+
+    .works__subTitle{
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: 'Bungee Inline', cursive;
+        color: #E70303;
+        margin-bottom: 4vh;
+    }
 
     .works__workBox{
         min-width: 300px;
@@ -566,10 +578,7 @@ hr{
                     text-align: center;
                 }
 
-                    .aboutMePageHeader__description span{
-                        color: #E70303;
-                        font-weight: 700;
-                    }
+                    
 
 .aboutMePageBody{
     width: 100%;
@@ -671,6 +680,12 @@ hr{
             color: rgb(209, 209, 209);
             margin: 2vh 0;
             font-size: 1rem;
+            transition: linear .3s all;
+        }
+
+        .cvHeader__pdf:hover{
+            color: #E70303;
+            text-decoration: none;
         }
 
 /* .cvBody{} */
@@ -1066,6 +1081,10 @@ hr{
 
     /*------------------ HomePage -------------------*/
 
+    .homePage__info{
+        background-size: contain;
+    }
+
     .homePage__myImage{
         width: 45%;
         margin-top: -10vh;
@@ -1089,6 +1108,12 @@ hr{
                 height: 13vh;
                 font-size: 1.6rem;
             }
+
+    /*------------------ Works -------------------*/
+
+    .works__subTitle{
+        font-size: 2rem;
+    }
 
     /*------------------ ContactPage ----------------*/
 
@@ -1618,6 +1643,10 @@ hr{
             }
 
     /*------------------------ Works ------------------------*/
+
+    .works__subTitle{
+        font-size: 2.5rem;
+    }
 
     .works__circlesBox{
         display: none;
