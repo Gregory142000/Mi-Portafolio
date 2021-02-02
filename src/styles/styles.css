@@ -1,1834 +1,1822 @@
 /*-------------------------- General ------------------------------------------*/
 
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-html{
-    overflow-x: hidden;
+html {
+  overflow-x: hidden;
 }
 
-body{
-    font-family: 'Oswald', sans-serif;
-    overflow-x: hidden;
+body {
+  font-family: "Oswald", sans-serif;
+  overflow-x: hidden;
 }
 
-hr{
-    border-radius: 15%;
-    margin: auto;
-    display: none;
-    height: 1px;
-    background-color: #fff;
-    width: 80%;
+hr {
+  border-radius: 15%;
+  margin: auto;
+  display: none;
+  height: 1px;
+  background-color: #fff;
+  width: 80%;
 }
 
-span{
-    color: #fff;
-    font-weight: 700;
+span {
+  color: #fff;
+  font-weight: 700;
 }
 /*---------------------------------------------- Header ------------------------------------------------*/
 
-.header{
-    background-color: #000000;
-    width: 100%;
-    height: auto;
-    display: flex;
-    border: #000 3px solid;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0px;
+.header {
+  background-color: #000000;
+  width: 100%;
+  height: auto;
+  display: flex;
+  border: #000 3px solid;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px;
 }
 
-    .header__logo{
-        width: 100px;
-        height: 100px;
-        margin-top: -2vh;
-        margin-bottom: -4vh;
-    }
+.header__logo {
+  width: 100px;
+  height: 100px;
+  margin-top: -2vh;
+  margin-bottom: -4vh;
+}
 
-    .header__menuIcon{
-        width: 50px;
-        height: 50px;
-    }
+.header__menuIcon {
+  width: 50px;
+  height: 50px;
+}
 
-    .header__nav{
-        display: none;        
-    }
+.header__nav {
+  display: none;
+}
 
-        .header__nav ul{
-            display: flex;
-        }
+.header__nav ul {
+  display: flex;
+}
 
-            .header__nav li{
-                list-style: none;
-                margin: 0 2vw;
-            }
+.header__nav li {
+  list-style: none;
+  margin: 0 2vw;
+}
 
-                .header__link{
-                    color: #fff;
-                    text-decoration: none;
-                    font-size: 1.5rem;
-                    font-weight: 300;
-                    transition: all .5s linear;
-                }
+.header__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: all 0.5s linear;
+}
 
-                .header__link--hover:hover{
-                    color: #E70303;
-                    text-decoration: underline;
-                }
+.header__link--hover:hover {
+  color: #e70303;
+  text-decoration: underline;
+}
 
-        /* .header__link{} */
+/* .header__link{} */
 
 /*------------------------------------ Mobile Menu ------------------------------------*/
 
-.mobileNav{
-    background-color: #E70303;
-    width: 100%;
-    height: 117vh;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    z-index: 1000;
-    transform: translate(0, -120%);
-    visibility: hidden;
-    transition: all 1s ease;
-    margin-top: -12px;
+.mobileNav {
+  background-color: #e70303;
+  width: 100%;
+  height: 117vh;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 1000;
+  transform: translate(0, -120%);
+  visibility: hidden;
+  transition: all 1s ease;
+  margin-top: -12px;
 }
 
-.mobileNav--visibility{
-    opacity: 1;
-    transform: translate(0, -10%);
-    visibility: visible;
+.mobileNav--visibility {
+  opacity: 1;
+  transform: translate(0, -10%);
+  visibility: visible;
 }
 
-    .mobileNav__iconBox{
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .mobileNav ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        height: 100%;
-        margin-top: 15vh;
-    }
+.mobileNav__iconBox {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 
-        .mobileNav li{
-            list-style: none;
-            margin: 5vh 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.mobileNav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  margin-top: 15vh;
+}
 
-            .mobileNav__closed{
-                color: #E70303;
-                text-decoration: none;
-                font-size: 2.5rem;
-                font-weight: 700;
-                text-align: center;
-                width: 50px;
-                height: 50px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #fff;
-                border-radius: 1000px;
-                border: #fff 3px solid;
-                transition: all .6s ease;
-            }
+.mobileNav li {
+  list-style: none;
+  margin: 5vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-                .mobileNav__closed:hover{
-                    color: #fff;
-                    background-color: #E70303;
-                }
+.mobileNav__closed {
+  color: #e70303;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 1000px;
+  border: #fff 3px solid;
+  transition: all 0.6s ease;
+}
 
-            .mobileNav__link{
-                text-decoration: none;
-                color: #fff;
-                font-size: 2.5rem;
-                transition: all .5s ease;
-            }
-                .mobileNav__link--hover:hover{
-                    color: #000;
-                    font-size: 2.8rem;
-                }
+.mobileNav__closed:hover {
+  color: #fff;
+  background-color: #e70303;
+}
+
+.mobileNav__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.5rem;
+  transition: all 0.5s ease;
+}
+.mobileNav__link--hover:hover {
+  color: #000;
+  font-size: 2.8rem;
+}
 
 /*------------------------------- ScrollUp -------------------------------*/
 
-.scrollUp{
-    position: fixed;
-    height: 80%;
-    display: flex;
-    min-width: 75px;
-    width: 10%;
-    z-index: 600;
-    align-items: flex-end;
-    justify-content: flex-end;
+.scrollUp {
+  position: fixed;
+  height: 80%;
+  display: flex;
+  min-width: 75px;
+  width: 10%;
+  z-index: 600;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
-    .scrollUp__button{
-        width: 60px;
-        height: 60px;
-        margin-right: 20px;
-        border-radius: 50%;
-        opacity: 0;
-        margin: 10%;
-        visibility: hidden;
-        border: solid #fff 2px;
-        transition: all .5s ease;
-        background-color: #E70303;
-    }
+.scrollUp__button {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 50%;
+  opacity: 0;
+  margin: 10%;
+  visibility: hidden;
+  border: solid #fff 2px;
+  transition: all 0.5s ease;
+  background-color: #e70303;
+}
 
-        .scrollUp__button i{
-            font-size: 2rem;
-        }
+.scrollUp__button i {
+  font-size: 2rem;
+}
 
-    .scrollUp__button--visible{
-        opacity: 1;
-        z-index: 500;
-        visibility: visible;
-    }
+.scrollUp__button--visible {
+  opacity: 1;
+  z-index: 500;
+  visibility: visible;
+}
 
 /*---------------------------- Section: homePage --------------------------*/
 
-.homePage{
-    width: 100%;
-    background-color: #000;
-} 
-
-    .homePage__info{
-        background: url("../images/pages_images/background-mobile.png");
-        background-size: cover;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-    
-        .homePage__avatar{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-            .homePage__myImage{
-                width: 50%;
-                border-radius: 1000px;
-                margin-top: 2vh;
-            }
-
-            .homePage__socialNetworks{
-                margin-top: 4vh;
-            }
-
-                .homePage__socialNetworks ul{
-                    display: flex;
-                }
-
-                    .homePage__socialNetworks li{
-                        list-style: none;
-                        margin: 0 4vw;
-                    }
-
-                        .homePage__socialIcons{
-                            text-decoration: none;
-                            color: #000;   
-                        }
-
-                            .homePage__socialIcons i{
-                                font-size: 2.3rem;
-                                transition: all .5s ease;
-                            }
-
-                            .homePage__socialIcons i:hover{
-                                color: #E70303;
-                            }
-       
-        .homePage__mainText p{
-            margin: 4vh 5vw;
-            text-align: center;
-            font-size: 1.2rem;
-            color: #fff;
-        }
-
-            .homePage__mainText span{
-                color: #000;
-                font-weight: 700;
-            }
-            
-        .homePage__buttonsBox{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-            .homePage__buttons{
-                text-decoration: none;
-                color: #fff;
-                background-color: #E70303;
-                border-radius: 15px;
-                width: 50%;
-                height: 10vh;
-                margin: 1vh 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 1.5rem;
-                font-weight: 300;
-                transition: all .3s linear;
-            }
-
-            .homePage__buttons--shadow:hover{
-                box-shadow: 10px 10px 10px#000;
-            }
-/*------------------------------ Works ------------------------------*/
-
-.works{
-    height: auto;
-    width: 100%;
-    background-color: #fff;
+.homePage {
+  width: 100%;
+  background-color: #000;
 }
 
-    .works__subTitle{
-        font-size: 1.5rem;
-        text-align: center;
-        font-family: 'Bungee Inline', cursive;
-        color: #E70303;
-        margin-bottom: 4vh;
-    }
+.homePage__info {
+  background: url("../images/pages_images/background-mobile.png");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-    .works__workBox{
-        min-width: 300px;
-        width: 100%;
-        display: flex;
-        visibility: hidden;
-        opacity: 0;
-        transition: all 1.5s ease;
-    }
+.homePage__avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .works__workBox--visible{
-        visibility: visible;
-        opacity: 1;
-    }
+.homePage__myImage {
+  width: 50%;
+  border-radius: 1000px;
+  margin-top: 2vh;
+}
 
-        .works__work{
-            width: 100%;
-            position: absolute;
-        }
+.homePage__socialNetworks {
+  margin-top: 4vh;
+}
 
-        .works__link{
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 10vh;
-            color: #E70303;
-            position: absolute;
-            font-size: 1.7rem;
-            text-align: center;
-            text-decoration: none;
-            z-index: 50;
-            font-family: 'Bungee Inline', cursive;
-        }
+.homePage__socialNetworks ul {
+  display: flex;
+}
 
-    .works__circlesBox{
-        background-color: #000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.homePage__socialNetworks li {
+  list-style: none;
+  margin: 0 4vw;
+}
 
-        .works__circles{
-            margin: 1vh 2vw;
-            background-color: grey;
-            width: 15px;
-            border-radius: 50%;
-            height: 15px;
-            border: #fff solid 2px;
-            transition: all .5s ease;
-        }
+.homePage__socialIcons {
+  text-decoration: none;
+  color: #000;
+}
 
-        .works__circles--red{
-            background-color: #E70303;
-        }
+.homePage__socialIcons i {
+  font-size: 2.3rem;
+  transition: all 0.5s ease;
+}
 
-    .works__desktop{
-        display: none;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    
-        .works__cards{     
-            width: 500px;
-            display: flex;
-            height: 500px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 10vh 3vw;
-            background-color: rgb(37, 36, 36);
-            border-radius: 15px;
-        }
+.homePage__socialIcons i:hover {
+  color: #e70303;
+}
 
-            .works__cards img{
-                min-width: 300px;
-                width: 450px;
-                height: 250px;
-                object-fit: cover;
-                margin: 5%;
-                border: #E70303 solid 4px;
-            }
+.homePage__mainText p {
+  margin: 4vh 5vw;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+}
 
-            .works__cards a{
-                font-size: 2rem;
-                text-align: center;
-                color: #E70303;
-                width: 100%;
-                text-decoration: none;
-                font-family: 'Bungee Inline', cursive;
-            }
+.homePage__mainText span {
+  color: #000;
+  font-weight: 700;
+}
 
-            .works__cards p{
-                color: #fff;
-                margin: 5%;
-                font-size: 1.2rem;
-                text-align: center;
-            }
+.homePage__buttonsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homePage__buttons {
+  text-decoration: none;
+  color: #fff;
+  background-color: #e70303;
+  border-radius: 15px;
+  width: 50%;
+  height: 10vh;
+  margin: 1vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: all 0.3s linear;
+}
+
+.homePage__buttons--shadow:hover {
+  box-shadow: 10px 10px 10px#000;
+}
+/*------------------------------ Works ------------------------------*/
+
+.works {
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+}
+
+.works__subTitle {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Bungee Inline", cursive;
+  color: #e70303;
+  margin-bottom: 4vh;
+}
+
+.works__workBox {
+  min-width: 300px;
+  width: 100%;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+
+.works__workBox--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.works__work {
+  width: 100%;
+  position: absolute;
+}
+
+.works__link {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  color: #e70303;
+  position: absolute;
+  font-size: 1.7rem;
+  text-align: center;
+  text-decoration: none;
+  z-index: 50;
+  font-family: "Bungee Inline", cursive;
+}
+
+.works__circlesBox {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.works__circles {
+  margin: 1vh 2vw;
+  background-color: grey;
+  width: 15px;
+  border-radius: 50%;
+  height: 15px;
+  border: #fff solid 2px;
+  transition: all 0.5s ease;
+}
+
+.works__circles--red {
+  background-color: #e70303;
+}
+
+.works__desktop {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.works__cards {
+  width: 500px;
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10vh 3vw;
+  background-color: rgb(37, 36, 36);
+  border-radius: 15px;
+}
+
+.works__cards img {
+  min-width: 300px;
+  width: 450px;
+  height: 250px;
+  object-fit: cover;
+  margin: 5%;
+  border: #e70303 solid 4px;
+}
+
+.works__cards a {
+  font-size: 2rem;
+  text-align: center;
+  color: #e70303;
+  width: 100%;
+  text-decoration: none;
+  font-family: "Bungee Inline", cursive;
+}
+
+.works__cards p {
+  color: #fff;
+  margin: 5%;
+  font-size: 1.2rem;
+  text-align: center;
+}
 
 /*--------------------------------------------- Contact -----------------------------------------------*/
 
-.main{
-    background-color: #000;
+.main {
+  background-color: #000;
 }
 
-.contactPage{
-    background: url("../images/pages_images/background-mobile.png");
-    display: flex;
-    background-size: cover;
-    height: 90vh;
-    flex-direction: column;
-    align-items: center;
+.contactPage {
+  background: url("../images/pages_images/background-mobile.png");
+  display: flex;
+  background-size: cover;
+  height: 90vh;
+  flex-direction: column;
+  align-items: center;
 }
 
-    .contactPage__avatar{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 50vh;
-    }
+.contactPage__avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
 
-        .contactPage__myImage{
-            width: 50%;
-            border-radius: 1000px;
-            margin-top: 2vh;
-        }
+.contactPage__myImage {
+  width: 50%;
+  border-radius: 1000px;
+  margin-top: 2vh;
+}
 
-        .contactPage__socialNetworks{
-            margin-top: 4vh;
-        }
+.contactPage__socialNetworks {
+  margin-top: 4vh;
+}
 
-            .contactPage__socialNetworks ul{
-                display: flex;
-            }
+.contactPage__socialNetworks ul {
+  display: flex;
+}
 
-                .contactPage__socialNetworks li{
-                    list-style: none;
-                    margin: 0 4vw;
-                }
+.contactPage__socialNetworks li {
+  list-style: none;
+  margin: 0 4vw;
+}
 
-            .contactPage__socialIcons{
-                text-decoration: none;
-                color: #000;
-            }
+.contactPage__socialIcons {
+  text-decoration: none;
+  color: #000;
+}
 
-                .contactPage__socialIcons i{
-                    font-size: 2.3rem;
-                    transition: all .5s ease;
-                }
+.contactPage__socialIcons i {
+  font-size: 2.3rem;
+  transition: all 0.5s ease;
+}
 
-                .contactPage__socialIcons i:hover{
-                    color: #E70303;
-                }
+.contactPage__socialIcons i:hover {
+  color: #e70303;
+}
 
-    .contactPage__contact{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: auto;
-    }
+.contactPage__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
 
-        .contactPage__subTitle{
-            font-family: 'Bungee Inline', cursive;
-            color: #E70303;
-            font-size: 2rem;
-        }
+.contactPage__subTitle {
+  font-family: "Bungee Inline", cursive;
+  color: #e70303;
+  font-size: 2rem;
+}
 
-        .contactPage__text{
-            color: #fff;
-            font-size: 1.2rem;
-            width: 80%;
-            text-align: center;
-            display: flex;
-            margin: 2vh 0;
-            padding: 4%;
-        }
+.contactPage__text {
+  color: #fff;
+  font-size: 1.2rem;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  margin: 2vh 0;
+  padding: 4%;
+}
 
-        .contactPage__buttonContact{
-            background-color: #E70303;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 15px;
-            width: 90%;
-            height: 12vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 3vh;
-            font-size: 1.5rem;
-            font-weight: 300;
-            transition: all .3s linear;
-        }
+.contactPage__buttonContact {
+  background-color: #e70303;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 15px;
+  width: 90%;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vh;
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: all 0.3s linear;
+}
 
-        .contactPage__buttonContact--shadow:hover{
-            box-shadow: 10px 10px 10px #000;
-        }
+.contactPage__buttonContact--shadow:hover {
+  box-shadow: 10px 10px 10px #000;
+}
 
 /*------------------------------------------ About Me -------------------------------------------------*/
 
-.aboutMePageHeader{
-    background-color: #000;
+.aboutMePageHeader {
+  background-color: #000;
 }
 
-    .aboutMePageHeader__info{
-        background: url("../images/pages_images/background-mobile.png");
-        display: flex;
-        background-size: cover;
-        height: 100%;
-        flex-direction: column;
-        align-items: center;
-    }
-
-        .aboutMePageHeader__avatar{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 50vh;
-        }
-
-            .aboutMePageHeader__myImage{
-                width: 50%;
-                border-radius: 1000px;
-                margin-top: 2vh;
-            }
-
-            .aboutMePageHeader__socialNetworks{
-                margin-top: 4vh;
-            }
-
-                .aboutMePageHeader__socialNetworks ul{
-                    display: flex;
-                }
-
-                    .aboutMePageHeader__socialNetworks li{
-                        list-style: none;
-                        margin: 0 4vw;
-                    }
-
-                        .aboutMePageHeader__socialIcons{
-                            text-decoration: none;
-                            color: #000;
-                        }
-                        
-                            .aboutMePageHeader__socialIcons i{
-                                font-size: 2.3rem;
-                                transition: all .5s ease;
-                            }
-
-                            .aboutMePageHeader__socialIcons i:hover{
-                                color: #E70303
-                            }
-
-        .aboutMePageHeader__descriptionBox{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-            .aboutMePageHeader__subTitle{
-                color: #E70303;
-                font-size: 2rem;
-                font-family: 'Bungee Inline', cursive;
-            }
-
-            .aboutMePageHeader__description{
-                background-color: #000;
-                margin: 4vw;
-                border-radius: 15px;
-                padding: 3%;
-            }
-
-                .aboutMePageHeader__description p{
-                    color: #fff;
-                    font-size: 0.9rem;
-                    text-align: center;
-                }
-
-                    
-
-.aboutMePageBody{
-    width: 100%;
-    margin-top: 5vh;
+.aboutMePageHeader__info {
+  background: url("../images/pages_images/background-mobile.png");
+  display: flex;
+  background-size: cover;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
-    .aboutMePageBody__details{
-        background-color: black;
-        border-radius: 15px;
-        padding: 3%;
-        margin: 1vh 0;
-    }
+.aboutMePageHeader__avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
 
-    
-        .aboutMePageBody__summary{
-            color: #E70303;
-            font-family: 'Bungee Inline', cursive;
-            text-align: center;
-            font-size: 1.2rem;
-            height: auto;
-            margin: 2vh 0;
-        }
-        
-        .aboutMePageBody__summary:hover{
-            cursor: pointer;
-        }
+.aboutMePageHeader__myImage {
+  width: 50%;
+  border-radius: 1000px;
+  margin-top: 2vh;
+}
 
-            .aboutMePageBody__content{
-                width: 100%;
-                border-radius: 15px;
-            }
+.aboutMePageHeader__socialNetworks {
+  margin-top: 4vh;
+}
 
-            .aboutMePageBody__content--background-1{
-                background: url("../images/others/japanese-martial-art-kick-silhouette_23-2147694102.jpg");
-                background-size: cover;
-            }
-            
-            .aboutMePageBody__content--background-2{
-                background: url("../images/others/840_560.jpg");
-                background-size: cover;
-            }
-            
-            .aboutMePageBody__content--background-3{
-                background: url("../images/others/photo-1485827404703-89b55fcc595e.jpeg");                
-                background-size: cover;
-            }
+.aboutMePageHeader__socialNetworks ul {
+  display: flex;
+}
 
-                .aboutMePageBody__text{
-                    color: #fff;
-                    text-align: center;
-                    background: rgba(0, 0, 0, 0.5);
-                    padding: 3%;
-                }
+.aboutMePageHeader__socialNetworks li {
+  list-style: none;
+  margin: 0 4vw;
+}
+
+.aboutMePageHeader__socialIcons {
+  text-decoration: none;
+  color: #000;
+}
+
+.aboutMePageHeader__socialIcons i {
+  font-size: 2.3rem;
+  transition: all 0.5s ease;
+}
+
+.aboutMePageHeader__socialIcons i:hover {
+  color: #e70303;
+}
+
+.aboutMePageHeader__descriptionBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutMePageHeader__subTitle {
+  color: #e70303;
+  font-size: 2rem;
+  font-family: "Bungee Inline", cursive;
+}
+
+.aboutMePageHeader__description {
+  background-color: #000;
+  margin: 4vw;
+  border-radius: 15px;
+  padding: 3%;
+}
+
+.aboutMePageHeader__description p {
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.aboutMePageBody {
+  width: 100%;
+  margin-top: 5vh;
+}
+
+.aboutMePageBody__details {
+  background-color: black;
+  border-radius: 15px;
+  padding: 3%;
+  margin: 1vh 0;
+}
+
+.aboutMePageBody__summary {
+  color: #e70303;
+  font-family: "Bungee Inline", cursive;
+  text-align: center;
+  font-size: 1.2rem;
+  height: auto;
+  margin: 2vh 0;
+}
+
+.aboutMePageBody__summary:hover {
+  cursor: pointer;
+}
+
+.aboutMePageBody__content {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.aboutMePageBody__content--background-1 {
+  background: url("../images/others/japanese-martial-art-kick-silhouette_23-2147694102.jpg");
+  background-size: cover;
+}
+
+.aboutMePageBody__content--background-2 {
+  background: url("../images/others/840_560.jpg");
+  background-size: cover;
+}
+
+.aboutMePageBody__content--background-3 {
+  background: url("../images/others/photo-1485827404703-89b55fcc595e.jpeg");
+  background-size: cover;
+}
+
+.aboutMePageBody__text {
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3%;
+}
 
 /*----------------------------------------- CV --------------------------------------------------------*/
 
-.cvHeader{
-    background: url("../images/pages_images/background-mobile.png");
-    display: flex;
-    background-size: contain;
-    height: auto;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
+.cvHeader {
+  background: url("../images/pages_images/background-mobile.png");
+  display: flex;
+  background-size: contain;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
-    .cvHeader__blackBox{
-        background-color: #000;
-        width: 90%;
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-    }
+.cvHeader__blackBox {
+  background-color: #000;
+  width: 90%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
 
-        .cvHeader__myImage{
-            width: 60%;
-            border-radius: 50%;
-            margin: 2vh 0;
-        }
+.cvHeader__myImage {
+  width: 60%;
+  border-radius: 50%;
+  margin: 2vh 0;
+}
 
-        .cvHeader__myName{
-            color: #E70303;
-            font-family: 'Bungee Inline', cursive;
-            margin: 1vh 0;
-            font-size: 2rem;
-            text-align: center;
-            width: 100%;
-        }
+.cvHeader__myName {
+  color: #e70303;
+  font-family: "Bungee Inline", cursive;
+  margin: 1vh 0;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+}
 
-        .cvHeader__subTitle{
-            color: #fff;
-            font-size: 1.6rem;
-        }
+.cvHeader__subTitle {
+  color: #fff;
+  font-size: 1.6rem;
+}
 
-        .cvHeader__pdf{
-            color: rgb(209, 209, 209);
-            margin: 2vh 0;
-            font-size: 1rem;
-            transition: linear .3s all;
-        }
+.cvHeader__pdf {
+  color: rgb(209, 209, 209);
+  margin: 2vh 0;
+  font-size: 1rem;
+  transition: linear 0.3s all;
+}
 
-        .cvHeader__pdf:hover{
-            color: #E70303;
-            text-decoration: none;
-        }
+.cvHeader__pdf:hover {
+  color: #e70303;
+  text-decoration: none;
+}
 
 /* .cvBody{} */
 
-        .cvBody__boxes{
-            background-color: #000;
-            width: 80%;
-            height: auto;
-            padding: 2rem;
-            margin: 1vh auto;
-            border-radius: 15px;
-        }
+.cvBody__boxes {
+  background-color: #000;
+  width: 80%;
+  height: auto;
+  padding: 2rem;
+  margin: 1vh auto;
+  border-radius: 15px;
+}
 
-            .cvBody__section{
-                color: #E70303;
-                width: 100%;
-                font-family: 'Bungee Inline', cursive;
-                font-size: 1.5rem;
-            }
+.cvBody__section {
+  color: #e70303;
+  width: 100%;
+  font-family: "Bungee Inline", cursive;
+  font-size: 1.5rem;
+}
 
-                .cvBody__webSite{
-                    color: #fff;
-                    transition: ease .4s all;
-                }
+.cvBody__webSite {
+  color: #fff;
+  transition: ease 0.4s all;
+}
 
-                .cvBody__webSite:hover{
-                    color: #E70303;
-                }
+.cvBody__webSite:hover {
+  color: #e70303;
+}
 
-            .cvBody__section--left{
-                text-align: start;
-            }
-            
-            .cvBody__section--right{
-                text-align: end;
-            }
+.cvBody__section--left {
+  text-align: start;
+}
 
-                .cvBody__list{
-                    margin-top: 2vh;
-                }
+.cvBody__section--right {
+  text-align: end;
+}
 
-                    .cvBody__items{
-                        color: #fff;
-                        font-size: 1.2rem
-                    }
+.cvBody__list {
+  margin-top: 2vh;
+}
 
-            .cvBody__technology{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                margin-top: 2vh;
-            }
+.cvBody__items {
+  color: #fff;
+  font-size: 1.2rem;
+}
 
-                    .cvBody__languages{
-                        width: 100px;
-                        display: flex;
-                        height: auto;
-                        flex-direction: column;
-                        margin: 1.5vw;
-                    }
+.cvBody__technology {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
 
-                        .cvBody__language img{
-                            width: 40%;
-                        }
+.cvBody__languages {
+  width: 100px;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  margin: 1.5vw;
+}
 
-                        .cvBody__languagesName{
-                            color: #fff;
-                            text-align: center;
-                            font-size: 1.1rem;
-                        }
+.cvBody__language img {
+  width: 40%;
+}
 
-        .cvBody__myDescription{
-            color: #fff;
-            font-size: 1.2rem;
-            margin: 2vh 0;
-        }
+.cvBody__languagesName {
+  color: #fff;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.cvBody__myDescription {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 2vh 0;
+}
 
 /*---------------------------------------- Luxury Cars ----------------------------------------*/
 
 /* .luxury-cars{} */
 
-        .luxury-cars__header{
-            background: url("../images/pages_images/background-mobile.png");
-            width: 100%;
-            height: auto;
-            background-size: cover;
-        }
+.luxury-cars__header {
+  background: url("../images/pages_images/background-mobile.png");
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
 
-            .luxury-cars__title{
-                color: #E70303;
-                width: 100%;
-                margin-bottom: 2vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2rem;
-                height: 100px;
-                font-family: 'Bungee Inline', cursive;
-            }
+.luxury-cars__title {
+  color: #e70303;
+  width: 100%;
+  margin-bottom: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  height: 100px;
+  font-family: "Bungee Inline", cursive;
+}
 
-            .luxury-cars__coverPage{
-                width: 100%;
-            }
+.luxury-cars__coverPage {
+  width: 100%;
+}
 
-            .luxury-cars__buttonsBox{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-            
-            .luxury-cars__links--shadow{
-                transition: all .3s linear;
-                box-shadow: 0px 0px 0px black;
-            }
-            
-            .luxury-cars__links--shadow:hover{
-                box-shadow: 15px 15px 15px black;
-            }
+.luxury-cars__buttonsBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-                .luxury-cars__links{
-                    text-decoration: none;
-                    background-color: #E70303;
-                    border-radius: 15px;
-                    width: 80%;
-                    height: 10vh;
-                    z-index: 400;
-                    margin: 2vh 0;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: #fff;
-                    font-weight: 300;
-                    font-size: 1.4rem;
-                }
+.luxury-cars__links--shadow {
+  transition: all 0.3s linear;
+  box-shadow: 0px 0px 0px black;
+}
 
-                    .luxury-cars__links i{
-                        margin: 3vh 3vw;
-                        font-size: 2rem;
-                    }
+.luxury-cars__links--shadow:hover {
+  box-shadow: 15px 15px 15px black;
+}
 
-        .luxury-cars__body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+.luxury-cars__links {
+  text-decoration: none;
+  background-color: #e70303;
+  border-radius: 15px;
+  width: 80%;
+  height: 10vh;
+  z-index: 400;
+  margin: 2vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
 
-            .luxury-cars__blackBox{
-                background-color: #000;
-                border-radius: 15px;
-                margin: 3vh 0;
-                padding: 5%;
-            }
+.luxury-cars__links i {
+  margin: 3vh 3vw;
+  font-size: 2rem;
+}
 
-                .luxury-cars__subTitle{
-                    color: #E70303;
-                    font-family: 'Bungee Inline', cursive ;
-                    font-size: 1.8rem;
-                    text-align: center;
-                    margin: 2vh 0;
-                }
+.luxury-cars__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-                .luxury-cars__text{
-                    color: #fff;
-                    text-align: center;
-                    font-size: 1.2rem;
-                }
+.luxury-cars__blackBox {
+  background-color: #000;
+  border-radius: 15px;
+  margin: 3vh 0;
+  padding: 5%;
+}
 
-                    .luxury-cars__technology{
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        align-items: center;
-                    }
+.luxury-cars__subTitle {
+  color: #e70303;
+  font-family: "Bungee Inline", cursive;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 2vh 0;
+}
 
-                        .luxury-cars__languages{
-                            width: 120px;
-                        }
+.luxury-cars__text {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
 
-                            .luxury-cars__figure{
-                                margin: 3vh 0;
-                                display: flex;
-                                justify-content: center;
-                                flex-direction: column;
-                                width: 120px;
-                            }
+.luxury-cars__technology {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
-                                .luxury-cars__icon{
-                                    width: auto;
-                                }
+.luxury-cars__languages {
+  width: 120px;
+}
 
-                                .luxury-cars__titleIcon{
-                                    color: #fff;
-                                    text-align: center;
-                                    margin: 1vh 0;
-                                    font-size: 1.3rem;
-                                }
-                
-                .luxury-cars__responsive{
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                }
+.luxury-cars__figure {
+  margin: 3vh 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 120px;
+}
 
-                    .luxury-cars__responsiveImage{
-                        margin: 2vh 0;
-                    }
+.luxury-cars__icon {
+  width: auto;
+}
 
-                    .luxury-cars__responsiveImage--big{
-                        width: 90%;
-                    }
-                    .luxury-cars__responsiveImage--meddle{
-                        width: 50%;
-                    }
-                    .luxury-cars__responsiveImage--small{
-                        width: 30%;
-                    }
+.luxury-cars__titleIcon {
+  color: #fff;
+  text-align: center;
+  margin: 1vh 0;
+  font-size: 1.3rem;
+}
+
+.luxury-cars__responsive {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.luxury-cars__responsiveImage {
+  margin: 2vh 0;
+}
+
+.luxury-cars__responsiveImage--big {
+  width: 90%;
+}
+.luxury-cars__responsiveImage--meddle {
+  width: 50%;
+}
+.luxury-cars__responsiveImage--small {
+  width: 30%;
+}
 
 /*---------------------------------------- Briefcase ----------------------------------------*/
 
 /* .briefcase{} */
 
-        .briefcase__header{
-            background: url("../images/pages_images/background-mobile.png");
-            width: 100%;
-            height: auto;
-            background-size: contain;
-        }
+.briefcase__header {
+  background: url("../images/pages_images/background-mobile.png");
+  width: 100%;
+  height: auto;
+  background-size: contain;
+}
 
-            .briefcase__title{
-                color: #e70303;
-                width: 100%;
-                margin-bottom: 2vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2rem;
-                height: 100px;
-                font-family: 'bungee inline', cursive;
-            }
+.briefcase__title {
+  color: #e70303;
+  width: 100%;
+  margin-bottom: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  height: 100px;
+  font-family: "bungee inline", cursive;
+}
 
-            .briefcase__coverPage{
-                width: 100%;
-            }
+.briefcase__coverPage {
+  width: 100%;
+}
 
-            .briefcase__buttonsBox{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-            
-            .briefcase__links--shadow{
-                transition: all .3s linear;
-                box-shadow: 0px 0px 0px black;
-            }
-            
-            .briefcase__links--shadow:hover{
-                box-shadow: 15px 15px 15px black;
-            }
+.briefcase__buttonsBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-                .briefcase__links{
-                    text-decoration: none;
-                    background-color: #e70303;
-                    border-radius: 15px;
-                    width: 80%;
-                    height: 10vh;
-                    margin: 2vh 0;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: #fff;
-                    font-weight: 300;
-                    font-size: 1.4rem;
-                }
+.briefcase__links--shadow {
+  transition: all 0.3s linear;
+  box-shadow: 0px 0px 0px black;
+}
 
-                    .briefcase__links i{
-                        margin: 3vh 3vw;
-                        font-size: 2rem;
-                    }
+.briefcase__links--shadow:hover {
+  box-shadow: 15px 15px 15px black;
+}
 
-        .briefcase__body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+.briefcase__links {
+  text-decoration: none;
+  background-color: #e70303;
+  border-radius: 15px;
+  width: 80%;
+  height: 10vh;
+  margin: 2vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
 
-            .briefcase__blackBox{
-                background-color: #000;
-                border-radius: 15px;
-                margin: 3vh 0;
-                padding: 5%;
-            }
+.briefcase__links i {
+  margin: 3vh 3vw;
+  font-size: 2rem;
+}
 
-            .briefcase__figureContact{
-                width: 100%;
-                margin: 3vh 0;
-            }
+.briefcase__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-                .briefcase__figureImage{
-                    width: 100%;
-                }
+.briefcase__blackBox {
+  background-color: #000;
+  border-radius: 15px;
+  margin: 3vh 0;
+  padding: 5%;
+}
 
-                .briefcase__subTitle{
-                    color: #E70303;
-                    font-family: 'Bungee Inline', cursive ;
-                    font-size: 1.8rem;
-                    text-align: center;
-                    margin: 2vh 0;
-                }
+.briefcase__figureContact {
+  width: 100%;
+  margin: 3vh 0;
+}
 
-                .briefcase__text{
-                    color: #fff;
-                    text-align: center;
-                    font-size: 1.2rem;
-                }
+.briefcase__figureImage {
+  width: 100%;
+}
 
-                    .briefcase__technology{
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        align-items: center;
-                    }
+.briefcase__subTitle {
+  color: #e70303;
+  font-family: "Bungee Inline", cursive;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 2vh 0;
+}
 
-                        .briefcase__languages{
-                            width: 120px;
-                        }
+.briefcase__text {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
 
-                            .briefcase__figure{
-                                margin: 3vh 0;
-                                display: flex;
-                                justify-content: center;
-                                flex-direction: column;
-                                width: 120px;
-                            }
+.briefcase__technology {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
-                                .briefcase__icon{
-                                    width: auto;
-                                }
+.briefcase__languages {
+  width: 120px;
+}
 
-                                .briefcase__titleIcon{
-                                    color: #fff;
-                                    text-align: center;
-                                    margin: 1vh 0;
-                                    font-size: 1.3rem;
-                                }
-                
-                .briefcase__responsive{
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                }
+.briefcase__figure {
+  margin: 3vh 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 120px;
+}
 
-                    .briefcase__responsiveImage{
-                        margin: 2vh 0;
-                    }
+.briefcase__icon {
+  width: auto;
+}
 
-                    .briefcase__responsiveImage--big{
-                        width: 90%;
-                    }
-                    .briefcase__responsiveImage--meddle{
-                        width: 50%;
-                    }
-                    .briefcase__responsiveImage--small{
-                        width: 30%;
-                    }
+.briefcase__titleIcon {
+  color: #fff;
+  text-align: center;
+  margin: 1vh 0;
+  font-size: 1.3rem;
+}
+
+.briefcase__responsive {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.briefcase__responsiveImage {
+  margin: 2vh 0;
+}
+
+.briefcase__responsiveImage--big {
+  width: 90%;
+}
+.briefcase__responsiveImage--meddle {
+  width: 50%;
+}
+.briefcase__responsiveImage--small {
+  width: 30%;
+}
 
 /*------------------------------------------ Media Queries ----------------------------------------------*/
-@media (min-width: 315px){
+@media (min-width: 315px) {
+  /*--------------------------- LuxuryCars ------------------*/
+  .luxury-cars__header {
+    background-size: contain;
+  }
 
-    /*--------------------------- LuxuryCars ------------------*/
-    .luxury-cars__header{
-        background-size: contain;
-    }
-
-    /*--------------------------- Briefcase ------------------*/
-    .briefcase__header{
-        background-size: contain;
-    }
+  /*--------------------------- Briefcase ------------------*/
+  .briefcase__header {
+    background-size: contain;
+  }
 }
 
-@media (min-width: 380px){
+@media (min-width: 380px) {
+  /*------------------------ Header ---------------------*/
 
-    /*------------------------ Header ---------------------*/
+  .header {
+    width: 100%;
+  }
 
-    .header{
-        width: 100%;
-    }
+  /*------------------------ MobileMenu ------------------*/
 
-    /*------------------------ MobileMenu ------------------*/
+  .mobileNav__link {
+    font-size: 3rem;
+  }
 
-    .mobileNav__link{
-        font-size: 3rem;
-    }
+  /*------------------ HomePage -------------------*/
 
-    /*------------------ HomePage -------------------*/
+  .homePage__info {
+    background-size: contain;
+  }
 
-    .homePage__info{
-        background-size: contain;
-    }
+  .homePage__myImage {
+    width: 45%;
+    margin-top: -10vh;
+  }
 
-    .homePage__myImage{
-        width: 45%;
-        margin-top: -10vh;
-    }
+  .homePage__socialIcons i {
+    font-size: 2.8rem;
+  }
 
-        .homePage__socialIcons i{
-            font-size: 2.8rem;
-        }
+  .homePage__mainText p {
+    font-size: 1.5rem;
+  }
 
-    .homePage__mainText p{
-        font-size: 1.5rem;
-    }
+  .homePage__buttonsBox {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-        .homePage__buttonsBox{
-            flex-direction: row;
-            justify-content: space-around;
-        }
+  .homePage__buttons {
+    width: 40%;
+    height: 13vh;
+    font-size: 1.6rem;
+  }
 
-            .homePage__buttons{
-                width: 40%;
-                height: 13vh;
-                font-size: 1.6rem;
-            }
+  /*------------------ Works -------------------*/
 
-    /*------------------ Works -------------------*/
+  .works__subTitle {
+    font-size: 2rem;
+  }
 
-    .works__subTitle{
-        font-size: 2rem;
-    }
+  /*------------------ ContactPage ----------------*/
 
-    /*------------------ ContactPage ----------------*/
+  .contactPage__myImage {
+    width: 45%;
+  }
 
-    .contactPage__myImage{
-        width: 45%;
-    }
+  .contactPage__socialIcons i {
+    font-size: 2.8rem;
+  }
 
-        .contactPage__socialIcons i{
-            font-size: 2.8rem;
-        }
+  .contactPage__subTitle {
+    font-size: 2rem;
+  }
 
-    .contactPage__subTitle{
-        font-size: 2rem;
-    }
+  .contactPage__text {
+    font-size: 1.4rem;
+    margin: 0;
+  }
 
-    .contactPage__text{
-        font-size: 1.4rem;
-        margin: 0;
-    }
+  .contactPage__buttonContact {
+    font-size: 2rem;
+  }
 
-    .contactPage__buttonContact{
-        font-size: 2rem;
-    }
+  /*------------------ AboutMePage- --------------*/
 
-    /*------------------ AboutMePage- --------------*/
+  .aboutMePageHeader__info {
+    background-size: contain;
+  }
 
-    .aboutMePageHeader__info{
-        background-size: contain; 
-    }
+  .aboutMePageHeader__myImage {
+    width: 45%;
+  }
 
-        .aboutMePageHeader__myImage{
-            width: 45%;
-        }
+  .aboutMePageHeader__socialIcons i {
+    font-size: 2.8rem;
+  }
 
-            .aboutMePageHeader__socialIcons i{
-                font-size: 2.8rem;
-            }
+  .aboutMePageHeader__subTitle {
+    font-size: 2rem;
+  }
 
-        .aboutMePageHeader__subTitle{
-            font-size: 2rem;
-        }
+  .aboutMePageBody__content {
+    height: 50vh;
+  }
 
-    .aboutMePageBody__content{
-        height: 50vh;
-    }
+  .aboutMePageBody__text {
+    font-size: 1.2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 
-    .aboutMePageBody__text{
-        font-size: 1.2rem;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
+  /*------------------ LuxuryCars ----------------*/
+  .luxury-cars__title {
+    font-size: 2.5rem;
+  }
 
-    /*------------------ LuxuryCars ----------------*/
-    .luxury-cars__title{
-        font-size: 2.5rem;
-    }
-     
-    /*------------------ Briefcase ----------------*/
-    .briefcase__title{
-        font-size: 2.5rem;
-    }
+  /*------------------ Briefcase ----------------*/
+  .briefcase__title {
+    font-size: 2.5rem;
+  }
 }
 
-@media (min-width: 440px){
+@media (min-width: 440px) {
+  /*----------------- ContactPage -----------------*/
 
-    /*----------------- ContactPage -----------------*/
+  .contactPage {
+    background-size: contain;
+  }
 
-    .contactPage{
-        background-size: contain;
-    }
+  .contactPage__subTitle {
+    margin-top: 3vh;
+  }
 
-        .contactPage__subTitle{
-            margin-top: 3vh;
-        }
+  .contactPage__buttonContact {
+    width: 400px;
+  }
 
-        .contactPage__buttonContact{
-            width: 400px;
-        }
+  /*----------------- AboutMePage ----------------*/
 
-    /*----------------- AboutMePage ----------------*/
+  .aboutMePageHeader__subTitle {
+    margin-top: 5vh;
+    font-size: 2.3rem;
+  }
 
-    .aboutMePageHeader__subTitle{
-        margin-top: 5vh;
-        font-size: 2.3rem;
-    }
+  .aboutMePageHeader__description p {
+    font-size: 1rem;
+  }
 
-        .aboutMePageHeader__description p{
-            font-size: 1rem;
-        }
+  .aboutMePageBody__summary {
+    font-size: 1.5rem;
+  }
 
-    .aboutMePageBody__summary{
-        font-size: 1.5rem;
-    }
+  /*--------------------- CV ---------------------*/
 
-    /*--------------------- CV ---------------------*/
+  .cvHeader__myName {
+    font-size: 2.5rem;
+  }
 
-    .cvHeader__myName{
-        font-size: 2.5rem;
-    }
+  .cvHeader__subTitle {
+    font-size: 2rem;
+  }
 
-    .cvHeader__subTitle{
-        font-size: 2rem;
-    }
+  .cvHeader__pdf {
+    font-size: 1.3rem;
+  }
 
-    .cvHeader__pdf{
-        font-size: 1.3rem;
-    }
+  .cvBody__section {
+    font-size: 2rem;
+  }
 
-        .cvBody__section{
-            font-size: 2rem;
-        }
+  .cvBody__list {
+    margin-left: 3vw;
+  }
+  .cvBody__items {
+    font-size: 1.3rem;
+  }
 
-        .cvBody__list{
-            margin-left: 3vw;
-        }
-            .cvBody__items{
-                font-size: 1.3rem;
-            }
+  .cvBody__myDescription {
+    font-size: 1.3rem;
+  }
 
-            .cvBody__myDescription{
-                font-size: 1.3rem;
-            }
+  /*------------------------- LuxuryCars -------------------------*/
 
-    /*------------------------- LuxuryCars -------------------------*/
+  .luxury-cars__links {
+    font-size: 1.8rem;
+  }
 
-    .luxury-cars__links{
-        font-size: 1.8rem;
-    }
+  .luxury-cars__links i {
+    font-size: 2.5rem;
+  }
 
-        .luxury-cars__links i{
-            font-size: 2.5rem;
-        }
+  .luxury-cars__subTitle {
+    font-size: 2.2rem;
+    margin: 4vh 0;
+  }
 
-    .luxury-cars__subTitle{
-        font-size: 2.2rem;
-        margin: 4vh 0;
-    }
+  /*------------------------- Briefcase -------------------------*/
 
-    /*------------------------- Briefcase -------------------------*/
+  .briefcase__links {
+    font-size: 1.8rem;
+  }
 
-    .briefcase__links{
-        font-size: 1.8rem;
-    }
+  .briefcase__links i {
+    font-size: 2.5rem;
+  }
 
-        .briefcase__links i{
-            font-size: 2.5rem;
-        }
-
-    .briefcase__subTitle{
-        font-size: 2.2rem;
-        margin: 4vh 0;
-    }
+  .briefcase__subTitle {
+    font-size: 2.2rem;
+    margin: 4vh 0;
+  }
 }
 
-@media (min-width: 600px){
+@media (min-width: 600px) {
+  /*-------------------- Header -------------------*/
 
-    /*-------------------- Header -------------------*/
+  .header__logo {
+    width: 120px;
+    height: 120px;
+  }
 
-    .header__logo{
-        width: 120px;
-        height: 120px;
-    }
+  .header__menuIcon {
+    display: none;
+  }
 
-    .header__menuIcon{
-        display: none;
-    }
+  .header__nav {
+    display: flex;
+  }
 
-    .header__nav{
-        display: flex;
-    }
+  /*------------------- HomePage ------------------*/
 
-    /*------------------- HomePage ------------------*/
+  .homePage__info {
+    background-size: contain;
+  }
 
-    .homePage__info{
-        background-size: contain;
-    }
+  .homePage__myImage {
+    width: 30%;
+  }
 
-        .homePage__myImage{
-            width: 30%;
-        }
+  .homePage__socialIcons i {
+    font-size: 3rem;
+  }
 
-            .homePage__socialIcons i{
-                font-size: 3rem;
-            }
+  .homePage__mainText p {
+    font-size: 1.7rem;
+  }
 
-        .homePage__mainText p{
-            font-size: 1.7rem;
-        }
+  .homePage__buttons {
+    font-size: 2rem;
+  }
 
-            .homePage__buttons{
-                font-size: 2rem;
-            }
+  /*------------------- Works ---------------------*/
 
-    /*------------------- Works ---------------------*/
+  .works__link {
+    font-size: 2.5rem;
+  }
 
-    .works__link{
-        font-size: 2.5rem;
-    }
+  .works__circles {
+    width: 20px;
+    height: 20px;
+  }
 
-        .works__circles{
-            width: 20px;
-            height: 20px;
-        }
+  /*------------------- ContactPage ---------------*/
 
-    /*------------------- ContactPage ---------------*/
+  .contactPage__avatar {
+    justify-content: flex-start;
+    margin-top: -10px;
+    height: 45vh;
+  }
 
-    .contactPage__avatar{
-        justify-content: flex-start;
-        margin-top: -10px;
-        height: 45vh;
-    }
+  .contactPage__contact {
+    height: 50vh;
+  }
 
-    .contactPage__contact{
-        height: 50vh;
-    }
+  .contactPage__myImage {
+    width: 30%;
+  }
 
-        .contactPage__myImage{
-            width: 30%;
-        }
+  .contactPage__subTitle {
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+  }
 
-        .contactPage__subTitle{
-            font-size: 2.5rem;
-            margin-bottom: 0px;
-        }
+  .contactPage__text {
+    font-size: 1.8rem;
+  }
 
-        .contactPage__text{
-            font-size: 1.8rem;
-        }
+  /*------------------ AboutMePage ---------------*/
 
-    /*------------------ AboutMePage ---------------*/
+  .aboutMePageHeader__myImage {
+    width: 30%;
+  }
 
-    .aboutMePageHeader__myImage{
-        width: 30%;
-    }
+  .aboutMePageHeader__description p {
+    font-size: 1.2rem;
+  }
 
-        .aboutMePageHeader__description p{
-            font-size: 1.2rem;
-        }
+  .aboutMePageBody__summary {
+    font-size: 1.8rem;
+  }
 
-    .aboutMePageBody__summary{
-        font-size: 1.8rem;
-    }
+  .aboutMePageBody__content {
+    height: 70vh;
+  }
 
-    .aboutMePageBody__content{
-        height: 70vh;
-    }
-        
-        .aboutMePageBody__content p{
-            font-size: 1.7rem;
-        }
+  .aboutMePageBody__content p {
+    font-size: 1.7rem;
+  }
 
-    /*--------------------- CV ---------------------*/
+  /*--------------------- CV ---------------------*/
 
-    .cvHeader__myImage{
-        width: 50%;
-    }
+  .cvHeader__myImage {
+    width: 50%;
+  }
 
-    .cvHeader__myName{
-        margin: 5vh 0;
-    }
+  .cvHeader__myName {
+    margin: 5vh 0;
+  }
 
-    /*--------------------- LuxuryCars ---------------------*/
-    .luxury-cars__header{
-        display: flex;
-        flex-direction: column;
-    }
+  /*--------------------- LuxuryCars ---------------------*/
+  .luxury-cars__header {
+    display: flex;
+    flex-direction: column;
+  }
 
-        .luxury-cars__title{
-            font-size: 2.7rem;
-        }
+  .luxury-cars__title {
+    font-size: 2.7rem;
+  }
 
-        .luxury-cars__coverPage{
-            width: 90%;
-            margin: auto;
-        }
+  .luxury-cars__coverPage {
+    width: 90%;
+    margin: auto;
+  }
 
-        .luxury-cars__buttonsBox{
-            flex-direction: row;
-            justify-content: space-around;
-        }
+  .luxury-cars__buttonsBox {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-            .luxury-cars__links{
-                width: 45%;
-                font-size: 1.6rem;
-            }
+  .luxury-cars__links {
+    width: 45%;
+    font-size: 1.6rem;
+  }
 
-                .luxury-cars__links i{
-                    margin: 3vh 1vw;
-                }
+  .luxury-cars__links i {
+    margin: 3vh 1vw;
+  }
 
-        .luxury-cars__blackBox{
-            width: 80%;
-        }
+  .luxury-cars__blackBox {
+    width: 80%;
+  }
 
-            .luxury-cars__text{
-                font-size: 1.3rem;
-            }
-            
-        .luxury-cars__languages{
-            width: 180px;
-        }
+  .luxury-cars__text {
+    font-size: 1.3rem;
+  }
 
-            .luxury-cars__figure{
-                width: 180px;
-                align-items: center;
-            }
+  .luxury-cars__languages {
+    width: 180px;
+  }
 
-                .luxury-cars__icon{
-                    width: 70%;
-                }
+  .luxury-cars__figure {
+    width: 180px;
+    align-items: center;
+  }
 
-                .luxury-cars__titleIcon{
-                    font-size: 1.8rem;
-                }
+  .luxury-cars__icon {
+    width: 70%;
+  }
 
-    /*--------------------- Briefcase ---------------------*/
-    .briefcase__header{
-        display: flex;
-        flex-direction: column;
-    }
+  .luxury-cars__titleIcon {
+    font-size: 1.8rem;
+  }
 
-        .briefcase__title{
-            font-size: 2.7rem;
-        }
+  /*--------------------- Briefcase ---------------------*/
+  .briefcase__header {
+    display: flex;
+    flex-direction: column;
+  }
 
-        .briefcase__coverPage{
-            width: 90%;
-            margin: auto;
-        }
+  .briefcase__title {
+    font-size: 2.7rem;
+  }
 
-        .briefcase__buttonsBox{
-            flex-direction: row;
-            justify-content: space-around;
-        }
+  .briefcase__coverPage {
+    width: 90%;
+    margin: auto;
+  }
 
-            .briefcase__links{
-                width: 45%;
-                font-size: 1.6rem;
-            }
+  .briefcase__buttonsBox {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-                .briefcase__links i{
-                    margin: 3vh 1vw;
-                }
+  .briefcase__links {
+    width: 45%;
+    font-size: 1.6rem;
+  }
 
-        .briefcase__blackBox{
-            width: 80%;
-        }
+  .briefcase__links i {
+    margin: 3vh 1vw;
+  }
 
-            .briefcase__text{
-                font-size: 1.3rem;
-            }
-            
-        .briefcase__languages{
-            width: 180px;
-        }
+  .briefcase__blackBox {
+    width: 80%;
+  }
 
-            .briefcase__figure{
-                width: 180px;
-                align-items: center;
-            }
+  .briefcase__text {
+    font-size: 1.3rem;
+  }
 
-                .briefcase__icon{
-                    width: 70%;
-                }
+  .briefcase__languages {
+    width: 180px;
+  }
 
-                .briefcase__titleIcon{
-                    font-size: 1.8rem;
-                }
+  .briefcase__figure {
+    width: 180px;
+    align-items: center;
+  }
 
-        .briefcase__figureContact{
-            width: 80%;
-        }
+  .briefcase__icon {
+    width: 70%;
+  }
+
+  .briefcase__titleIcon {
+    font-size: 1.8rem;
+  }
+
+  .briefcase__figureContact {
+    width: 80%;
+  }
 }
 
-@media (min-width: 690px){
+@media (min-width: 690px) {
+  /*-------------------- Contact ------------------*/
 
-    /*-------------------- Contact ------------------*/
+  .contactPage {
+    flex-direction: row;
+    height: 80vh;
+  }
 
-    .contactPage{
-        flex-direction: row;
-        height: 80vh;
-    }
+  .contactPage__avatar {
+    order: 1;
+    height: 100%;
+    width: 40%;
+    justify-content: center;
+  }
 
-        .contactPage__avatar{
-            order: 1;
-            height: 100%;
-            width: 40%;
-            justify-content: center;
-        }
+  .contactPage__myImage {
+    width: 80%;
+  }
 
-            .contactPage__myImage{
-                width: 80%;
-            }
+  .contactPage__contact {
+    height: 100%;
+    width: 60%;
+  }
 
-        .contactPage__contact{
-            height: 100%;
-            width: 60%;
-        }
+  .contactPage__subTitle {
+    margin-bottom: 4vh;
+  }
 
-            .contactPage__subTitle{
-                margin-bottom: 4vh;
-            }
+  .contactPage__buttonContact {
+    width: 80%;
+    font-size: 1.5rem;
+    height: 15vh;
+  }
 
-            .contactPage__buttonContact{
-                width: 80%;
-                font-size: 1.5rem;
-                height: 15vh;
-            }
+  /*----------------- AboutMePage ----------------*/
 
-    /*----------------- AboutMePage ----------------*/
+  .aboutMePageHeader__info {
+    flex-direction: row;
+  }
 
-    .aboutMePageHeader__info{
-        flex-direction: row;
-    }
+  .aboutMePageHeader__avatar {
+    order: 1;
+    width: 40%;
+  }
 
-        .aboutMePageHeader__avatar{
-            order: 1;
-            width: 40%;
-        }
+  .aboutMePageHeader__myImage {
+    width: 80%;
+    margin-top: -10vh;
+  }
 
-            .aboutMePageHeader__myImage{
-                width: 80%;
-                margin-top: -10vh;
-            }
+  .aboutMePageHeader__descriptionBox {
+    width: 60%;
+  }
 
-        .aboutMePageHeader__descriptionBox{
-            width: 60%;
-        }
-
-            .aboutMePageHeader__subTitle{
-                font-size: 2.5rem;
-            }
+  .aboutMePageHeader__subTitle {
+    font-size: 2.5rem;
+  }
 }
 
-@media (min-width: 800px){
+@media (min-width: 800px) {
+  /*----------------------------- CV ------------------------------*/
 
-    /*----------------------------- CV ------------------------------*/
+  .cvHeader__blackBox {
+    width: 75%;
+  }
+  .cvHeader__myImage {
+    width: 310px;
+  }
 
-    .cvHeader__blackBox{
-        width: 75%;
-    }
-    .cvHeader__myImage{
-        width: 310px;
-    }
+  .cvHeader__myName {
+    font-size: 3rem;
+  }
 
-    .cvHeader__myName{
-        font-size: 3rem;
-    }
+  .cvBody__contentUp {
+    display: flex;
+    justify-content: space-around;
+  }
 
-    .cvBody__contentUp{
-        display: flex;
-        justify-content: space-around;
-    }
+  .cvBody__boxes--order {
+    order: 1;
+    width: 40%;
+  }
 
-        .cvBody__boxes--order{
-            order: 1; 
-            width: 40%;
-        }
+  .cvBody__content {
+    width: 50%;
+  }
 
-        .cvBody__content{
-            width: 50%;
-        }
+  /*-------------------------------- LuxuryCars ------------------------------------*/
 
-    /*-------------------------------- LuxuryCars ------------------------------------*/
+  .luxury-cars__coverPage {
+    width: 70%;
+  }
 
-    .luxury-cars__coverPage{
-        width: 70%;
-    }
+  /*-------------------------------- Briefcase ------------------------------------*/
 
-    /*-------------------------------- Briefcase ------------------------------------*/
-
-    .briefcase__coverPage{
-        width: 70%;
-    }
+  .briefcase__coverPage {
+    width: 70%;
+  }
 }
 
-@media (min-width: 890px){
+@media (min-width: 890px) {
+  /*------------------ HomePage ------------------*/
 
-    /*------------------ HomePage ------------------*/
+  hr {
+    display: block;
+  }
 
-    hr{
-        display: block;
-    }
+  .homePage__info {
+    display: flex;
+    flex-direction: row;
+    height: 82vh;
+  }
 
-    .homePage__info{
-        display: flex;
-        flex-direction: row;
-        height: 82vh;
-    }
+  .homePage__avatar {
+    order: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-right: 2vw;
+    padding-top: 30px;
+  }
 
-    .homePage__avatar{
-        order: 1;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        margin-right: 2vw;
-        padding-top: 30px;
-    }
+  .homePage__myImage {
+    width: 80%;
+  }
 
-        .homePage__myImage{
-            width: 80%;
-        }
+  .homePage__socialNetworks li {
+    margin: 0 2vw;
+  }
+  .homePage__socialIcons i {
+    font-size: 4rem;
+  }
 
-        .homePage__socialNetworks li{
-            margin: 0 2vw;
-        }
-            .homePage__socialIcons i{
-                font-size: 4rem;
-            }
+  .homePage__mainText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .homePage__mainText p {
+    font-size: 2rem;
+    width: auto;
+  }
 
-    .homePage__mainText{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-    }
-    .homePage__mainText p{
-        font-size: 2rem;
-        width: auto;
-    }
+  .homePage__mainText span {
+    color: #e70303;
+  }
 
-        .homePage__mainText span{
-            color: #E70303;
-        }
+  .homePage__buttonsBox {
+    flex-direction: column;
+  }
 
-        .homePage__buttonsBox{
-            flex-direction: column;
-        }
+  .homePage__buttons {
+    width: 50%;
+  }
 
-            .homePage__buttons{
-                width: 50%;
-            }
+  /*------------------------ Works ------------------------*/
 
-    /*------------------------ Works ------------------------*/
+  .works__subTitle {
+    font-size: 2.5rem;
+  }
 
-    .works__subTitle{
-        font-size: 2.5rem;
-    }
+  .works__circlesBox {
+    display: none;
+  }
 
-    .works__circlesBox{
-        display: none;
-    }
+  .works__slider {
+    display: none;
+  }
 
-    .works__slider{
-        display: none;
-    }
+  .works__desktop {
+    display: flex;
+  }
 
-    .works__desktop{
-        display: flex;
-    }
+  /*-------------------------- Contact -------------------------*/
 
-    /*-------------------------- Contact -------------------------*/
+  .contactPage__socialNetworks li {
+    margin: 0 2vw;
+  }
 
-    .contactPage__socialNetworks li{
-        margin: 0 2vw;
-    }
+  .contactPage__socialIcons i {
+    font-size: 4rem;
+  }
 
-        .contactPage__socialIcons i{
-            font-size: 4rem;
-        }
+  .contactPage__subTitle {
+    font-size: 3rem;
+  }
 
-    .contactPage__subTitle{
-        font-size: 3rem;
-    }
+  .contactPage__text {
+    font-size: 2rem;
+  }
 
-    .contactPage__text{
-        font-size: 2rem;
-    }
+  .contactPage__buttonContact {
+    font-size: 2.3rem;
+  }
 
-    .contactPage__buttonContact{
-        font-size: 2.3rem;
-    }
+  /*------------------ AboutMePage ---------------*/
 
-    /*------------------ AboutMePage ---------------*/
+  .aboutMePageHeader__myImage {
+    margin-top: 0px;
+  }
 
-    .aboutMePageHeader__myImage{
-        margin-top: 0px;
-    }
+  .aboutMePageHeader__socialNetworks li {
+    margin: 0 2vw;
+  }
 
-        .aboutMePageHeader__socialNetworks li{
-            margin: 0 2vw;
-        }
-        
-            .aboutMePageHeader__socialIcons i{
-                font-size: 4rem;
-            }
+  .aboutMePageHeader__socialIcons i {
+    font-size: 4rem;
+  }
 
-    .aboutMePageHeader__subTitle{
-        font-size: 3rem;
-    }
+  .aboutMePageHeader__subTitle {
+    font-size: 3rem;
+  }
 
-        .aboutMePageHeader__description p{
-            font-size: 1.4rem;
-        }
+  .aboutMePageHeader__description p {
+    font-size: 1.4rem;
+  }
 
-    .aboutMePageBody__details{
-        width: 80%;
-        margin: 1vw auto;
-    }
+  .aboutMePageBody__details {
+    width: 80%;
+    margin: 1vw auto;
+  }
 
-        .aboutMePageBody__summary{
-            font-size: 2rem;
-        }
+  .aboutMePageBody__summary {
+    font-size: 2rem;
+  }
 
-        .aboutMePageBody__content{
-            height: 80vh;
-        }
+  .aboutMePageBody__content {
+    height: 80vh;
+  }
 
-            .aboutMePageBody__content p{
-                font-size: 2rem;
-            }
+  .aboutMePageBody__content p {
+    font-size: 2rem;
+  }
 
-    /*---------------------- LuxuryCars -----------------------*/
+  /*---------------------- LuxuryCars -----------------------*/
 
-    .luxury-cars__coverPage{
-        width: 700px;
-        height: 60vh;
-    }
+  .luxury-cars__coverPage {
+    width: 700px;
+    height: 60vh;
+  }
 
-    .luxury-cars__title{
-        font-size: 3rem;
-    }
+  .luxury-cars__title {
+    font-size: 3rem;
+  }
 
-    .luxury-cars__subTitle{
-        font-size: 2.6rem;
-    }
+  .luxury-cars__subTitle {
+    font-size: 2.6rem;
+  }
 
-    .luxury-cars__responsive{
-        width: 80%;
-    }
+  .luxury-cars__responsive {
+    width: 80%;
+  }
 
-    /*---------------------- Briefcase-----------------------*/
+  /*---------------------- Briefcase-----------------------*/
 
-    .briefcase__coverPage{
-        width: 700px;
-        height: 60vh;
-    }
+  .briefcase__coverPage {
+    width: 700px;
+    height: 60vh;
+  }
 
-    .briefcase__title{
-        font-size: 3rem;
-    }
+  .briefcase__title {
+    font-size: 3rem;
+  }
 
-    .briefcase__subTitle{
-        font-size: 2.6rem;
-    }
+  .briefcase__subTitle {
+    font-size: 2.6rem;
+  }
 
-    .briefcase__responsive{
-        width: 80%;
-    }
-
+  .briefcase__responsive {
+    width: 80%;
+  }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
+  /*----------------------- ScrollUp ------------------------*/
 
-    /*----------------------- ScrollUp ------------------------*/
+  .scrollUp {
+    height: 80%;
+  }
 
-    .scrollUp{
-        height: 80%;
-    }
+  .scrollUp__button {
+    width: 70px;
+    height: 70px;
+  }
+  /*----------------------- Header ------------------------*/
 
-    .scrollUp__button{
-        width: 70px;
-        height: 70px;
-    }
-    /*----------------------- Header ------------------------*/
+  .header__logo {
+    width: 150px;
+    height: 150px;
+  }
 
-    .header__logo{
-        width: 150px;
-        height: 150px;
-    }
+  .header__link {
+    font-size: 2rem;
+  }
 
-    .header__link{
-        font-size: 2rem;
-    }
+  /*---------------------- HomePage -----------------------*/
 
-    /*---------------------- HomePage -----------------------*/
+  .homePage__avatar {
+    padding-top: 40px;
+    margin-right: 80px;
+  }
 
-    .homePage__avatar{
-        padding-top: 40px;
-        margin-right: 80px;
-    }
+  .homePage__myImage {
+    width: 80%;
+  }
 
-    .homePage__myImage{
-        width: 80%;
-    }
+  .homePage__mainText p {
+    font-size: 2.3rem;
+  }
 
-    .homePage__mainText p{
-        font-size: 2.3rem;
-    }
+  .homePage__buttons {
+    height: 15vh;
+    font-size: 2.3rem;
+  }
 
-        .homePage__buttons{
-            height: 15vh;
-            font-size: 2.3rem;
-        }
+  /*---------------------- ContactPage -------------------------*/
 
-    /*---------------------- ContactPage -------------------------*/
-
-    /* .contactPage__avatar{
+  /* .contactPage__avatar{
         justify-content: center;
     }
 
@@ -1836,260 +1824,403 @@ span{
         justify-content: center;
     } */
 
-    .contactPage__myImage{
-        width: 60%;
-    }
+  .contactPage__myImage {
+    width: 60%;
+  }
 
-        .contactPage__text{
-            margin: 7vh 0;
-            font-size: 2.3rem;
-        }
+  .contactPage__text {
+    margin: 7vh 0;
+    font-size: 2.3rem;
+  }
 
-        .contactPage__buttonContact{
-            height: 20vh;
-            font-size: 2.6rem;
-            width: 550px;
-        }
+  .contactPage__buttonContact {
+    height: 20vh;
+    font-size: 2.6rem;
+    width: 550px;
+  }
 
-    /*------------------ AboutMePage ---------------*/
+  /*------------------ AboutMePage ---------------*/
 
-    .aboutMePageHeader__avatar{
-        /* background-color: lightsalmon; */
-        height: 100%;
-        /* justify-content: flex-start; */
-    }
+  .aboutMePageHeader__avatar {
+    /* background-color: lightsalmon; */
+    height: 100%;
+    /* justify-content: flex-start; */
+  }
 
-        .aboutMePageHeader__myImage{
-            width: 70%;
-            margin-top: 0px;
-        }
-    
-    .aboutMePageHeader__descriptionBox{
-        /* background-color: lightgreen; */
-        height: 100%;
-    }
+  .aboutMePageHeader__myImage {
+    width: 70%;
+    margin-top: 0px;
+  }
 
-        .aboutMePageHeader__description{
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+  .aboutMePageHeader__descriptionBox {
+    /* background-color: lightgreen; */
+    height: 100%;
+  }
 
-            .aboutMePageHeader__description p{
-                font-size: 1.5rem;
-            }
+  .aboutMePageHeader__description {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    /*------------------------- LuxuryCars -------------------------*/
+  .aboutMePageHeader__description p {
+    font-size: 1.5rem;
+  }
 
-    .luxury-cars__coverPage{
-        width: 800px;
-        height: 450px;
-    }
+  /*------------------------- LuxuryCars -------------------------*/
 
-        .luxury-cars__links{
-            width: 40%;
-            height: 15vh;
-            font-size: 2rem;
-        }
+  .luxury-cars__coverPage {
+    width: 800px;
+    height: 450px;
+  }
 
-            .luxury-cars__links i{
-                font-size: 3rem;
-            }
+  .luxury-cars__links {
+    width: 40%;
+    height: 15vh;
+    font-size: 2rem;
+  }
 
-    .luxury-cars__subTitle{
-        margin-top: 0px;
-    }
+  .luxury-cars__links i {
+    font-size: 3rem;
+  }
 
-    .luxury-cars__responsive{
-        width: 60%;
-    }
+  .luxury-cars__subTitle {
+    margin-top: 0px;
+  }
 
-    /*------------------------- Briefcase -------------------------*/
+  .luxury-cars__responsive {
+    width: 60%;
+  }
 
-    .briefcase__coverPage{
-        width: 800px;
-        height: 450px;
-    }
+  /*------------------------- Briefcase -------------------------*/
 
-        .briefcase__links{
-            width: 40%;
-            height: 15vh;
-            font-size: 2rem;
-        }
+  .briefcase__coverPage {
+    width: 800px;
+    height: 450px;
+  }
 
-            .briefcase__links i{
-                font-size: 3rem;
-            }
+  .briefcase__links {
+    width: 40%;
+    height: 15vh;
+    font-size: 2rem;
+  }
 
-    .briefcase__subTitle{
-        margin-top: 0px;
-    }
+  .briefcase__links i {
+    font-size: 3rem;
+  }
 
-    .briefcase__responsive{
-        width: 60%;
-    }
+  .briefcase__subTitle {
+    margin-top: 0px;
+  }
+
+  .briefcase__responsive {
+    width: 60%;
+  }
 }
 
-@media (min-width: 1365px){
+@media (min-width: 1365px) {
+  /*----------------------- HomePage ----------------------*/
 
-    /*----------------------- HomePage ----------------------*/
+  .homePage__myImage {
+    width: 80%;
+  }
 
-    .homePage__myImage{
-        width: 80%;
-    }
+  .homePage__socialIcons i {
+    font-size: 5rem;
+  }
 
-        .homePage__socialIcons i{
-            font-size: 5rem;
-        }
+  .homePage__mainText p {
+    font-size: 2.5rem;
+  }
 
-    .homePage__mainText p{
-        font-size: 2.5rem;
-    }
-
-        .homePage__buttons{
-            height: 18vh;
-            font-size: 2.5rem;
-        }
+  .homePage__buttons {
+    height: 18vh;
+    font-size: 2.5rem;
+  }
 }
 
-@media (min-width: 768px) and (min-height: 1024px){
+@media (min-width: 768px) and (min-height: 1024px) {
+  /*------------------ Header ---------------------*/
 
-    /*------------------ Header ---------------------*/
+  .header__logo {
+    width: 180px;
+    height: 180px;
+  }
 
-    .header__logo{
-        width: 180px;
-        height: 180px;
-    }
+  .header__link {
+    font-size: 2rem;
+  }
 
-    .header__link{
-        font-size: 2rem;
-    }
+  /*------------------ Contact --------------------*/
 
-    /*------------------ Contact --------------------*/
+  .contactPage {
+    flex-direction: column;
+  }
 
-    .contactPage{
-        flex-direction: column;
-    }
+  .contactPage__avatar {
+    order: 0;
+  }
+  .contactPage__myImage {
+    width: 80%;
+  }
 
-        .contactPage__avatar{
-            order: 0;
-        }
-            .contactPage__myImage{
-                width: 80%;
-            }
+  .contactPage__socialIcons i {
+    font-size: 4rem;
+  }
 
-                .contactPage__socialIcons i{
-                    font-size: 4rem;
-                }
+  .contactPage__contact {
+    order: 1;
+  }
 
-        .contactPage__contact{
-            order: 1;
-        }
+  .contactPage__subTitle {
+    font-size: 3.5rem;
+  }
 
-            .contactPage__subTitle{
-                font-size: 3.5rem;
-            }
+  .contactPage__text {
+    font-size: 2.5rem;
+    width: 700px;
+  }
 
-            .contactPage__text{
-                font-size: 2.5rem;
-                width: 700px;
-            }
-
-            .contactPage__buttonContact{
-                height: 12vh;
-                width: 100%;
-                font-size: 2.5rem;
-            }
+  .contactPage__buttonContact {
+    height: 12vh;
+    width: 100%;
+    font-size: 2.5rem;
+  }
 }
 
-@media (min-width: 1024px) and (min-height: 1100px){
+@media (min-width: 1024px) and (min-height: 1100px) {
+  /*--------------- Header -------------------*/
 
-    /*--------------- Header -------------------*/
+  .header__logo {
+    width: 200px;
+    height: 200px;
+  }
 
-    .header__logo{
-        width: 200px;
-        height: 200px;
-    }
+  .header__link {
+    font-size: 2.5rem;
+  }
 
-    .header__link{
-        font-size: 2.5rem;
-    }
+  /*--------------- HomePage -------------*/
 
-    /*--------------- HomePage -------------*/
+  .homePage__info {
+    flex-direction: column;
+  }
 
-    .homePage__info{
-        flex-direction: column;
-    }
+  .homePage__socialIcons i {
+    font-size: 5rem;
+  }
 
-        .homePage__socialIcons i{
-            font-size: 5rem;
-        }
-        
-            .homePage__myImage{
-                width: 40%;
-                margin-top: 10vh;
-            }
+  .homePage__myImage {
+    width: 40%;
+    margin-top: 10vh;
+  }
 
-        .homePage__mainText{
-            order: 1;
-        }
+  .homePage__mainText {
+    order: 1;
+  }
 
-        .homePage__mainText p{
-            font-size: 3rem;
-        }
+  .homePage__mainText p {
+    font-size: 3rem;
+  }
 
-            .homePage__mainText a{
-                height: 11vh;
-                font-size: 3rem;
-            }
+  .homePage__mainText a {
+    height: 11vh;
+    font-size: 3rem;
+  }
 
-    .works__cards{
-        width: 600px;
-        margin-bottom: -2vh;
-    }
-       
-        .works__cards img{
-            width: 600px;
-        }
+  .works__cards {
+    width: 600px;
+    margin-bottom: -2vh;
+  }
 
-        .works__cards a{
-            font-size: 3.5rem;
-        }
+  .works__cards img {
+    width: 600px;
+  }
 
-    /*------------------- Contact -------------------*/
+  .works__cards a {
+    font-size: 3.5rem;
+  }
 
-    .contactPage{
-        flex-direction: column;
-    }
+  /*------------------- Contact -------------------*/
 
-        .contactPage__avatar{
-            margin-bottom: 3vh;
-        }
+  .contactPage {
+    flex-direction: column;
+  }
 
-            .contactPage__myImage{
-                width: 90%;
-            }
+  .contactPage__avatar {
+    margin-bottom: 3vh;
+  }
 
-                .contactPage__socialIcons i{
-                    font-size: 6rem;
-                }
+  .contactPage__myImage {
+    width: 90%;
+  }
 
-            .contactPage__subTitle{
-                font-size: 5rem;
-            }
+  .contactPage__socialIcons i {
+    font-size: 6rem;
+  }
 
-            .contactPage__text{
-                font-size: 3.5rem;
-                width: 900px;
-                margin: 0px;
-                margin-top: -2vh;
-            }
+  .contactPage__subTitle {
+    font-size: 5rem;
+  }
 
-            .contactPage__buttonContact{
-                height: 12vh;
-                width: 100%;
-                font-size: 3.5rem;
-                margin-top: 4vh;
-            }
+  .contactPage__text {
+    font-size: 3.5rem;
+    width: 900px;
+    margin: 0px;
+    margin-top: -2vh;
+  }
+
+  .contactPage__buttonContact {
+    height: 12vh;
+    width: 100%;
+    font-size: 3.5rem;
+    margin-top: 4vh;
+  }
+}
+
+/*---------------------- Reformed Styles --------------------*/
+
+/*------------------- Var -----------------*/
+
+:root {
+  --my-red: #e70303;
+  --my-white: rgb(211, 211, 211);
+  --my-grey: rgb(37, 36, 36);
+}
+
+/*---------------- Globals ----------------*/
+
+.Global__subTitle {
+  font-family: "Bungee Inline", cursive;
+  font-size: 2.5em;
+  color: var(--my-red);
+  margin: 2vh 0;
+  padding: 1rem;
+}
+
+.Global__textBox {
+  background-color: #000;
+  color: var(--my-white);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.Global__button {
+  font-size: 1.2em;
+  font-weight: 300;
+  background-color: var(--my-red);
+  color: #000;
+  text-decoration: none;
+  min-width: auto;
+  max-width: 80%;
+  width: 100%;
+  height: 8vh;
+  margin: 10px auto;
+  padding: 0 0.7rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.Global__button:hover {
+  box-shadow: 15px 15px 15px #000;
+}
+
+.Global__container {
+  background-color: var(--my-grey);
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin: 4vh 0;
+  text-align: center;
+}
+
+/*---------------- FirstSection ------------------*/
+
+.FirstSection {
+  background: url("../images/pages_images/background-mobile.png");
+  background-size: cover;
+}
+
+.FirstSection__container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, auto);
+}
+
+.FirstSection__pageInfo {
+  order: 1;
+  margin: 4vh 0;
+}
+
+.FirstSection__presentation {
+  display: flex;
+  justify-content: center;
+}
+
+.FirstSection__content {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, auto);
+}
+
+.FirstSection__avatar {
+  order: 0;
+  display: grid;
+  margin: 5vh 0;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, auto);
+}
+
+.FirstSection__img {
+  width: 70%;
+  border-radius: 50%;
+  justify-self: center;
+  margin: 3vh 0;
+}
+
+.FirstSection__boxLinks {
+  justify-self: center;
+  height: auto;
+}
+
+/* ul */
+
+.FirstSection__itemLink {
+  list-style: none;
+  display: inline-block;
+  margin: 0 2vw;
+}
+
+.FirstSection__link {
+  text-decoration: none;
+  color: var(--my-white);
+  transition: all 0.3s linear;
+}
+
+.FirstSection__link:hover {
+  color: var(--my-red);
+}
+
+.FirstSection__link i {
+  font-size: 2.5em;
+}
+
+/*------------------- Media Query ------------------*/
+
+@media (min-width: 415px) {
+  .FirstSection__img {
+    width: 50%;
+  }
+}
+
+@media (min-width: 495px) {
+  .FirstSection {
+    background-size: contain;
+  }
 }
