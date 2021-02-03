@@ -8,7 +8,7 @@
     content="Portafolio profesional de Gregory Jesús Vicent Guerra programador web y desarrollador de software, aquí muestro mis trabajos y proyectos ademas de dar un vistazo sobre mi persona y mis intereses personales.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords"
-    content="Gregory Vicent, Gregory Jesús Vicent Guerra, desarrollador web, programador web, desarrollador web, portafolio Gregory Vicent, blog, Gregory Vicent Blog">
+    content="Gregory Vicent, Gregory Jesús Vicent Guerra, desarrollador web, programador web, desarrollador web, CodeGreg, blog, Gregory Vicent Blog">
   <meta name="author" content="Gregory Jesús Vicent Guerra">
   <meta name="copyright" content="Gregory Jesús Vicent Guerra">
   <meta name="robots" content="index">
@@ -65,23 +65,19 @@
   <main>
 
     <section class="FirstSection">
+      <!-- <hr /> -->
 
       <div class="FirstSection__container">
 
         <div class="FirstSection__pageInfo">
           <div class="FirstSection__presentation">
-            <h2 class="Global__subTitle">GregCode</h2>
+            <h2 class="Global__subTitle  Global__subTitle--big">GregCode</h2>
           </div>
           <div class="FirstSection__content">
-            <p class="Global__textBox">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde magni recusandae earum saepe quis,
-              sint nemo sequi. Nesciunt a dolorem rerum nisi blanditiis corrupti dolore velit et? Doloribus labore, cum
-              ad magni natus recusandae! Consectetur, accusantium facilis suscipit rerum eaque explicabo iste quasi
-              magnam vero nobis quibusdam, corrupti, quis ad. Molestiae iste suscipit atque, non consectetur doloribus
-              mollitia sapiente optio earum repellat temporibus dignissimos? Nobis, ex impedit modi necessitatibus quam
-              quo vitae nostrum pariatur similique commodi eaque quidem debitis.
+            <p class="Global__textBox  Global__textBox--stop">
+              Este es <span class="Global__red">GregCode</span>, un humilde blog hecho en WordPress del cual soy autor, considero que una de las mejores maneras de aprender uno es enseñando a otros y esa es la esencía de este blog. Aunque la temática principal se centra en la tecnología confieso que aun estoy muy lejos de poder considerarme un experto en ningún tema relacionado con esta área pese a lo mucho que me apasiona su estudio, aun asi espero que puedas encontrar algo interesante de leer entre todas las entradas aquí presentes o directamente en el sitio web donde se aloja <span class="Global__red">GregCode</span>.
             </p>
-            <a class="Global__button" href="">
+            <a class="Global__button  Global__button--large  Global__button--center" href="https://gregcode.000webhostapp.com/" target="_blank">
               Ir a GregCode
             </a>
           </div>
@@ -116,38 +112,26 @@
 
     </section>
 
-    <section class="Blog">
+    <section class="Blog" id="blog">
 
       <div class="Global__container">
 
         <h3 class="Global__subTitle">Últimos Posts:</h3>
-        
-        <div class="works__circlesBox">
-          <a href="#" class="works__criclesLink">
-            <div class="works__circles works__circles--red" data-slide="luxury-cars"></div>
-          </a>
-          <a href="#">
-            <div class="works__circles" data-slide="myBriefcase"></div>
-          </a>
+
+        <div class="Global__cardsZone">
+          <img src="../src/images/icons/Spinner-1s-200px.svg" alt="Loader" id="loader">
+          <template id="template-card-blog">
+            <div class="Global__card">
+              <a id="link-image" target="_blank">
+                <img>
+              </a>
+              <a target="_blank" id="link-card" class="Global__button  Global__button--center"></a>
+              <p class="Global__textBox"></p>
+            </div>
+          </template>
         </div>
-        
-        <div class="works__slider">
-          <div class="works__workBox works__workBox--visible">
-            <a href="../public/jobs/luxury_cars.html">
-              <img src="../src/images/pages_images/luxurycars.png" alt="Proyecto: luxury cars" title="luxury cars"
-              class="works__work">
-            </a>
-            <a href="../public/jobs/luxury_cars.html" class="works__link">LUXURY CARS</a>
-          </div>
-          
-          <div class="works__workBox">
-            <a href="../public/jobs/briefcase.html">
-              <img src="../src/images/pages_images/myBriefcase.png" alt="Proyecto: mi portafolio"
-              title="Portafolio Gregory Vicent" class="works__work">
-            </a>
-            <a href="../public/jobs/briefcase.html" class="works__link">ESTE PORTAFOLIO</a>
-          </div>
-        </div>
+
+        <a class="Global__link" target="_blank" href="https://gregcode.000webhostapp.com/">Ver todos los posts</a>
 
       </div>
 
@@ -156,6 +140,7 @@
   </main>
 
   <script src="../src/js/scripts.js" type="module"></script>
+  <script src="../src/js/blog.js" type="module"></script>
 </body>
 
 </html>
