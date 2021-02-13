@@ -6,9 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let pathName = window.location.pathname,
     pathNameSplit = pathName.split("/"),
     totalIndex = pathNameSplit.length,
-    fileUrl = pathNameSplit[totalIndex - 1]
+		fileUrl = pathNameSplit[totalIndex - 1]
+		
+		console.log(fileUrl)
 
   switch(fileUrl){
+		case "":
+			burgerMenu()
+			carousel()
+		break;
+		
     case "index.html":
 			burgerMenu()
 			carousel()
