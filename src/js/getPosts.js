@@ -5,7 +5,7 @@ export default async function getPosts() {
     $loader = document.getElementById("loader")
 
   try{
-    const myFetch = await fetch("https://gregcode.000webhostapp.com/wp-json/wp/v2/posts?_embed"),
+    const myFetch = await fetch("https://gregcode.000webhostapp.com/wp-json/wp/v2/posts?_embed&per_page=3"),
       json = await myFetch.json()
   
     console.log(json)
