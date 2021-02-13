@@ -1,6 +1,6 @@
 # Portafolio Profesional: Gregory Vicent
 
-**Puedes ver este proyecto en: [https://gregory142000.github.io/luxury-cars/#/](https://gregory142000.github.io/luxury-cars/#/)**
+**Puedes ver este proyecto en: [https://gregory142000.github.io/gregory-vicent/index.html](https://gregory142000.github.io/gregory-vicent/index.html)**
 
 ## Sobre este proyecto
 
