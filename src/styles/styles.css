@@ -476,7 +476,7 @@ span {
   display: flex;
   height: auto;
   flex-direction: column;
-  margin: 1.5vw;
+  margin: 3vw;
 }
 
 .cvBody__language img {
